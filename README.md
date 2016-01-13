@@ -38,4 +38,15 @@ trimming, but PEAR did not accept trimmed reads as input.
 
 2015-12-17
 ----------
-Run pyrad twice, with the assembled (de-multiplexed
+Run pyrad twice, with the assembled and the unassembled reads separately.
+The run for the unassembled reads failed. Needs to be checked.
+
+2016-01-11
+----------
+Quality check of loci. Select loci for *BEAST analysis and prepare the files.
+
+2016-01-13
+----------
+Run jmodeltest to determine the best molecular model for each locus, and run
+*BEAST with the selected loci.
+
