@@ -101,7 +101,7 @@ fi
 # Below, I select loci with only 2 informative sites and write an haplotypes file
 # with the haplotypes in each locus.
 
-if [ ! -e haplotypes ]; then
+if [ ! -e haplotypes2.txt ]; then
    gawk '((FILENAME ~ /_I2_/) && (FNR > 5) && (NF == 2)){
       split(FILENAME,F,/_/)
       HAPLOTYPES[FILENAME] = HAPLOTYPES[FILENAME] " " substr($2,F[4],1) substr($2,F[5],1)
@@ -109,7 +109,7 @@ if [ ! -e haplotypes ]; then
       for (f in HAPLOTYPES) {
          print f "\t" substr(HAPLOTYPES[f],2)
       }
-   }' nexus/*.nex > haplotypes
+   }' nexus/*.nex > haplotypes2.txt
 fi
 
 # Some loci include gaps, missing data, recombination events, or more than 2 alleles
@@ -117,8 +117,8 @@ fi
 # 3 haplotypes, because loci with 2 haplotypes have linked variable sites and loci with
 # 4 haplotypes show recombination.
 
-if [ ! -e selected_loci.txt ]; then
-   grep -v -P " N|N |-" haplotypes | \
+if [ ! -e selected_loci_2.txt ]; then
+   grep -v -P " N|N |-" haplotypes2.txt | \
    gawk '{
       for (i=2;i<=NF;i++) {
          FIRST[substr($i,1,1)]=1
@@ -131,5 +131,46 @@ if [ ! -e selected_loci.txt ]; then
       delete(FIRST); delete(SECOND); delete(HAP)
       if ((A == 2) && (B==2) && (C == 3)) print $0
       A=0; B=0; C=0
-   }' > selected_loci.txt
+   }' > selected_loci_2.txt
+fi
+
+# Loci with 3 variable sites are also very interesting, although it would take me
+# longer to filter out those with recombination. Let's give it a try.
+
+if [ ! -e haplotypes3.txt ]; then
+   gawk '((FILENAME ~ /_I3_/) && (FNR > 5) && (NF == 2)){
+      split(FILENAME, F, /_/)
+      HAPLOTYPES[FILENAME] = HAPLOTYPES[FILENAME] " " substr($2,F[4],1) substr($2,F[5],1) substr($2,F[6],1)
+   }END{
+      for (f in HAPLOTYPES) {
+         print f "\t" substr(HAPLOTYPES[f], 2)
+      }
+   }' nexus/*.nex > haplotypes3.txt
+fi
+
+if [ ! -e selected_loci_3.txt ]; then
+   gawk '($0 !~ /[\t ACGTN-][N-][ ACGTN-]/){
+      for (i=2; i<=NF; i++) {
+         FIRST[substr($i,1,1)] = 1
+         SECOND[substr($i,2,1)] = 1
+         THIRD[substr($i,3,1)] = 1
+         HAP1[substr($i,1,1) substr($i,2,1)] = 1
+         HAP2[substr($i,1,1) substr($i,3,1)] = 1
+         HAP3[substr($i,2,1) substr($i,3,1)] = 1
+         HAP0[$i] = 1
+      }
+      for (f in FIRST) A1++
+      for (s in SECOND) A2++
+      for (t in THIRD) A3++
+      for (h in HAP1) H1++
+      for (h in HAP2) H2++
+      for (h in HAP3) H3++
+      for (h in HAP0) H0++
+      delete(FIRST); delete(SECOND); delete(THIRD)
+      delete(HAP1); delete(HAP2); delete(HAP3)
+      if ((A1==2) && (A2==2) && (A3==2) && (H1<4) && (H2<4) && (H3<4) && (H0 > 2)) {
+         print $0
+      }
+      A1 = 0; A2 = 0; A3 = 0; H1 = 0; H2 = 0; H3 = 0; H0 = 0
+   }' haplotypes3.txt > selected_loci_3.txt
 fi
