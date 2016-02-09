@@ -61,3 +61,7 @@ nexus/se0050_N4_I2_187_346.nex	GT AC GC GC AC AC GT GT GT GT GT AC
 nexus/se0444_N4_I2_198_365.nex	GG GG GG AT AT AT GG GG GG GG GG AT GG GG AT AT GG AG GG GG
 nexus/se0294_N4_I2_115_534.nex	GC GC GC TC GT GC GC GC GT GC GC TC GC GC GC GC GC GC GC GC GC GC
 nexus/se0552_N4_I2_50_550.nex	TG TA TG TA TA TA TA TA TG CA CA CA TA TA TG TG
+# Informative:  63
+# Multiallelic: 
+# Linked:       25
+# Recombinant:  31

@@ -129,8 +129,22 @@ if [ ! -e selected_loci_2.txt ]; then
       for (s in SECOND) B++
       for (h in HAP) C++
       delete(FIRST); delete(SECOND); delete(HAP)
-      if ((A == 2) && (B==2) && (C == 3)) print $0
+      if ((A == 2) && (B==2) && (C == 3)) {
+         print $0
+         Informative++
+      } else if ((A > 2) || (B > 2)) {
+         Multiallelic++
+      } else if (C == 2) {
+         Linked++
+      } else if (C == 4) {
+         Recombinant++
+      }
       A=0; B=0; C=0
+   }END{
+      print "# Informative:  " Informative + 0
+      print "# Multiallelic: " Multiallelic + 0
+      print "# Linked:       " Linked + 0
+      print "# Recombinant:  " Recombinant + 0
    }' > selected_loci_2.txt
 fi
 
@@ -167,10 +181,54 @@ if [ ! -e selected_loci_3.txt ]; then
       for (h in HAP3) H3++
       for (h in HAP0) H0++
       delete(FIRST); delete(SECOND); delete(THIRD)
-      delete(HAP1); delete(HAP2); delete(HAP3)
-      if ((A1==2) && (A2==2) && (A3==2) && (H1<4) && (H2<4) && (H3<4) && (H0 > 2)) {
+      delete(HAP1); delete(HAP2); delete(HAP3); delete(HAP0)
+      if ((A1 != 2) || (A2 != 2) || (A3 != 2)) {
+         Multiallelic++
+      } else if ((H1 > 3) || (H2 > 3) || (H3 > 3)) {
+         Recombinant++
+      } else if (H0 < 3) {
+         Linked++
+      } else {
+         Informative++
          print $0
       }
       A1 = 0; A2 = 0; A3 = 0; H1 = 0; H2 = 0; H3 = 0; H0 = 0
+   }END{
+      print "# Informative:  " Informative + 0
+      print "# Multiallelic: " Multiallelic + 0
+      print "# Recombinant:  " Recombinant + 0
+      print "# Linked:       " Linked + 0
    }' haplotypes3.txt > selected_loci_3.txt
+fi
+
+# +--------------+------------+------------+-------+
+# |              | 2 variants | 3 variants | Total |
+# +--------------+------------+------------+-------+
+# | Informative  |         63 |         34 |    97 |
+# | Recombinant  |         31 |         32 |    63 |
+# | Linked       |         25 |          9 |    34 |
+# | Multiallelic |          0 |          1 |     1 |
+# +--------------+------------+------------+-------+
+# | Total        |        119 |         76 |   195 |
+# +--------------+------------+------------+-------+
+#
+# Let's take a look at the distribution of haplotypes among samples.
+
+if [ ! -e variable_sites_2.nex ]; then
+   for i in `grep -v "#" selected_loci_2.txt | cut -f 1`; do
+      gawk -v F=$i 'BEGIN{split(F,SITES,/_|\./)}(/^StC|^BlC/){
+         print $1 "\t" substr($2, SITES[4], 1) substr($2, SITES[5], 1)
+      } ($1 !~ /^StC|^BlC/) {
+         gsub(/NCHAR=[0-9]+;/, "NCHAR=2;")
+         print
+      }END{print ""}' $i >> variable_sites_2.nex
+   done
+   for i in `grep -v "#" selected_loci_3.txt | cut -f 1`; do
+      gawk -v F=$i 'BEGIN{split(F,SITES,/_|\./)}(/^StC|^BlC/){
+         print $1 "\t" substr($2,SITES[4], 1) substr($2,SITES[5],1) substr($2,SITES[6],1)
+      } ($1 !~ /^StC|^BlC/) {
+         gsub(/NCHAR=[0-9]+;/, "NCHAR=3;")
+         print
+      }END{print ""}' $i >> variable_sites_3.nex
+   done
 fi

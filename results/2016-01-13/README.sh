@@ -22,13 +22,13 @@ fi
 if [ ! -d nexus ]; then mkdir nexus; fi
 
 for i in `cut -f 1 selected_loci_2.txt`; do
-   if [ ! -e $i ]; then
+   if [ ! -e $i ] && ! [[ $i =~ ^# ]]; then
       ln -s $PREVIOUS/$i $i
    fi
 done
 
 for i in `cut -f 1 selected_loci_3.txt`; do
-   if [ ! -e $i ]; then
+   if [ ! -e $i ] && ! [[ $i =~ ^# ]]; then
       ln -s $PREVIOUS/$i $i
    fi
 done
