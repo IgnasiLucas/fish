@@ -48,7 +48,7 @@ if [ ! -e pe/params.txt ]; then
    sed -i '/## 14. /c\c95              ## 14. Prefix name for final output (no spaces) (s7)' params.txt
    sed -i '/## 17./c\St0006            ## 17.opt.: exclude taxa (list or prefix*) (s7)' params.txt
    sed -i '/## 18./c\fastq/*           ## 18.opt.: loc. of de-multiplexed data (s2)' params.txt
-   sed -i '/## 30./c\*                 ## 30.opt.: Output formats... (s5)' params.txt
+   sed -i '/## 30./c\*                 ## 30.opt.: Output formats... (s7)' params.txt
    sed -i '/## 36./c\4                 ## 36.opt.: vsearch max. threads per job (def.=6; see docs) (s3,s6)' params.txt
    echo "StCa 2 StCa*" >> params.txt
    echo "StCf 2 StCf*" >> params.txt
@@ -70,7 +70,7 @@ if [ ! -e se/params.txt ]; then
    sed -i '/## 14. /c\c95              ## 14. Prefix name for final output (no spaces) (s7)' params.txt
    sed -i '/## 17./c\St0006            ## 17.opt.: exclude taxa (list or prefix*) (s7)' params.txt
    sed -i '/## 18./c\fastq/*           ## 18.opt.: loc. of de-multiplexed data (s2)' params.txt
-   sed -i '/## 30./c\*                 ## 30.opt.: Output formats... (s5)' params.txt
+   sed -i '/## 30./c\*                 ## 30.opt.: Output formats... (s7)' params.txt
    sed -i '/## 36./c\4                 ## 36.opt.: vsearch max. threads per job (def.=6; see docs) (s3,s6)' params.txt
    echo "StCa 2 StCa*" >> params.txt
    echo "StCf 2 StCf*" >> params.txt

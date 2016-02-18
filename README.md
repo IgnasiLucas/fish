@@ -50,3 +50,18 @@ Quality check of loci. Select loci for *BEAST analysis and prepare the files.
 Run jmodeltest to determine the best molecular model for each locus, and run
 *BEAST with the selected loci.
 
+2016-02-16
+----------
+Here I run SVDQuartets, to infer the species tree from the SNPs. In fact, I am
+using the nexus data, including invariable sites and linked SNPs, but apparently
+the effect is minimum (Chifman & Kubatko 2014). I save the scores, which tell
+me that the power to distinguish among the possible topologies is minimal. However,
+the bootstrap agrees that the parallele speciation topology is always the most
+supported one.
+
+2016-02-18
+----------
+For a presentation, I needed some pictures of haplotype networks, and I used
+popart. Note that popart is interactive and not called here.
+
+
