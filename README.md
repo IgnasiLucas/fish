@@ -65,3 +65,17 @@ For a presentation, I needed some pictures of haplotype networks, and I used
 popart. Note that popart is interactive and not called here.
 
 
+2016-02-22
+----------
+I run Pyrad's step 2 (filtering reads) with different settings of the maximum
+number of undetermined bases (Ns) to optimize the number of reads recovered.
+As expected, merged reads have fewer Ns than non-merged reads. To be able to use
+at least 80% of the reads in a sample, I nead to allow at least 65 (non-merged)
+or 45 (merged) Ns. Note that this analysis is set to run in the server (64 threads
+requested to pyrad).
+
+2016-02-23
+----------
+I run Pyrad's step 3 (clustering within samples) with different values of the
+similarity clustering threshold. A high number of Ns requires a lower similarity
+clustering threshold. I also run this in the server (it's very slow). Still running.
