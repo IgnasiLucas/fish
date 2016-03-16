@@ -3,9 +3,15 @@
 #				2015-12-17
 #				----------
 #
-# Here, I will run pyrad separately in folders se and pe.
+# Here, I will run pyrad separately in folders se and pe. Preliminar runs proved
+# that pyrad does not handle well paired ends that have been trimmed, probably
+# because sometimes one of the reads of a pair may be too short. Indeed, pyrad
+# can detect and trim adapters as well. So, it should work with non-trimmed data.
+# Below, I re-run pyrad from the demultiplexed fastq files, not the trimmed ones,
+# both from merged and non-merged reads.
 
-FASTQ=`pwd | sed "s_2015-12-17_2015-12-16b/trimmed_"`
+#FASTQ=`pwd | sed "s_2015-12-17_2015-12-16b/trimmed_"`
+FASTQ=`pwd | sed "s_2015-12-17_2015-12-16b/demultiplexed_"`
 SAMPLE=(ZeroNotUsed St0001 St0003 St0006 St0015 St0016 St0019 St0037 St0039
          St0043 St0044 St0049 St0050 Bl0065 Bl0076 Bl0080 Bl0083
          Bl0104 Bl0108 Bl0091 Bl0093 Bl0094 Bl0095 Bl0098 Bl0116)
@@ -48,6 +54,7 @@ if [ ! -e pe/params.txt ]; then
    sed -i '/## 14. /c\c95              ## 14. Prefix name for final output (no spaces) (s7)' params.txt
    sed -i '/## 17./c\St0006            ## 17.opt.: exclude taxa (list or prefix*) (s7)' params.txt
    sed -i '/## 18./c\fastq/*           ## 18.opt.: loc. of de-multiplexed data (s2)' params.txt
+   sed -i '/## 21./c\1                 ## 21.opt.: filter: def=0=NQual 1=NQual+adapters. 2=strict   (s2)' params.txt
    sed -i '/## 30./c\*                 ## 30.opt.: Output formats... (s7)' params.txt
    sed -i '/## 36./c\4                 ## 36.opt.: vsearch max. threads per job (def.=6; see docs) (s3,s6)' params.txt
    echo "StCa 2 StCa*" >> params.txt
@@ -70,6 +77,7 @@ if [ ! -e se/params.txt ]; then
    sed -i '/## 14. /c\c95              ## 14. Prefix name for final output (no spaces) (s7)' params.txt
    sed -i '/## 17./c\St0006            ## 17.opt.: exclude taxa (list or prefix*) (s7)' params.txt
    sed -i '/## 18./c\fastq/*           ## 18.opt.: loc. of de-multiplexed data (s2)' params.txt
+   sed -i '/## 21./c\1                 ## 21.opt.: filter: def=0=NQual 1=NQual+adapters. 2=strict   (s2)' params.txt
    sed -i '/## 30./c\*                 ## 30.opt.: Output formats... (s7)' params.txt
    sed -i '/## 36./c\4                 ## 36.opt.: vsearch max. threads per job (def.=6; see docs) (s3,s6)' params.txt
    echo "StCa 2 StCa*" >> params.txt

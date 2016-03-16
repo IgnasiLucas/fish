@@ -65,7 +65,7 @@ for i in `seq 4 20`; do
       echo "   taxpartition species=StCf: StCf0037-StCf0050, StCa: StCa0001-StCa0019, BlCa: BlCa0065-BlCa0108, BlCl: BlCl0091-BlCl0116;" >> outfiles/mincov$j.nex
       echo "   log file=mincov$j.log start stop;"      >> outfiles/mincov$j.nex
       echo "   SVDQuartets speciestree=yes partition=species evalQuartets=all bootstrap=no showScores=yes showSV=no keepQuartets=no;" >> outfiles/mincov$j.nex
-      echo "   SVDQuartets speciestree=yes partition=species evalQuartets=all bootstrap=yes nreps=6000 nthreads=6; showScores=no" >> outfiles/mincov$j.nex
+      echo "   SVDQuartets speciestree=yes partition=species evalQuartets=all showScores=no bootstrap=yes nreps=6000 nthreads=6;" >> outfiles/mincov$j.nex
       echo "   describetrees 1 / plot=phylogram;"      >> outfiles/mincov$j.nex
       echo "   SaveTrees file=mincov$j.tree brlens;"   >> outfiles/mincov$j.nex
       echo "   log stop;"                              >> outfiles/mincov$j.nex
