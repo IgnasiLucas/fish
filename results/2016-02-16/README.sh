@@ -99,7 +99,7 @@ fi
 
 for i in `seq 4 20`; do
    j=`printf "%02u" $i`
-   if [ ! -e mincov$j.scores ]; then
-      gawk -f scores.awk mincov$j.log > mincov$j.scores
+   if [ ! -e outfiles/mincov$j.scores ]; then
+      gawk -f scores.awk outfiles/mincov$j.log > outfiles/mincov$j.scores
    fi
 done

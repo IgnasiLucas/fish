@@ -78,4 +78,10 @@ requested to pyrad).
 ----------
 I run Pyrad's step 3 (clustering within samples) with different values of the
 similarity clustering threshold. A high number of Ns requires a lower similarity
-clustering threshold. I also run this in the server (it's very slow). Still running.
+clustering threshold. I also run this in the server (it's very slow). Still running
+after a month. Preliminary results show a steeper increase in number of clusters
+of non-merged reads from clustering thresholds equal or higher than 88%. This is
+not likely to be driven by the presence of Ns. 
+
+Note that a more efficient pipeline to determine optimal clustering thresholds
+could be implemented using vsearch directly.
