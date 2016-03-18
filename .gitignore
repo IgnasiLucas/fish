@@ -1,1 +1,5 @@
 data/*
+*.png
+doc/*.aux
+doc/*.log
+doc/*.out
