@@ -120,24 +120,73 @@ for i in 74 76 78 80 82 84 86 88 90 92 94 96 98 99; do
    cd ..
 done
 
-if [ -e pe/summary.txt ]; then
-   gawk 'BEGIN{
-      i = 1
-   }(FNR == 1) {
-      ClustTh = substr(FILENAME, 12, 2)
-      THRESHOLD[i] = ClustTh
-      i++
-   }((FNR < 26) && (/^StC|^BlC/)){
-      SAMPLES[$1] = 1
-      ClustNum[ClustTh "," $1] = $2
-      MeanDepth[ClustTh "," $1] = $3
-      ClustNumD3[ClustTh "," $1] = $5
-      MeanDepthD3[ClustTh "," $1] = $6
-   }END{
-      HEADER = "Sample"
-      for (j = 1; j <= i; j++){
-         HEADER = HEADER "\tClustNum_" THRESHOLD[j] "\tMeanDepth_" THRESHOLD[j] "\tClustNumD3_" THRESHOLD[j] "\tMeanDepthD3_" THRESHOLD[j]
-      }
-      print HEADER
-   }' pe/stats/s3.clusters* > pe/summary.txt
+for i in pe se; do
+   if [ -e $i/summary.txt ]; then
+      gawk -f summary.awk $i/stats/s3.clusters* > $i/summary.txt
+      R --no-save < plot.R
+   fi
+done
+
+# In retrospect, I realize I should have used a subsample of the reads to study
+# the effect of the clustering threshold on the number of clusters and mean depth.
+# The relationship between clustering threshold and number of clusters is direct,
+# as expected. The question is what the optimum threshold is. Since divergence is
+# low, I expect the undetermined bases (Ns) to drive the split of clusters as the
+# required similarity increases. Paralogs must exist at any similarity level that
+# will spuriously be clustered together. The higher the required similarity level,
+# the larger the number of paralogs correctly distinguished as different clusters.
+# But this cannot be observed, and may have a smooth, minor effect.
+#
+# Non-merged (paired) reads are clustered using only the first read (see the pyrad
+# manual). However, they were filtered for a maximum number of Ns concatenated. Since
+# I expect most Ns of a pair to be in the second read, not used in clustering, the
+# similarity among non-merged reads should be higher than that among merged reads,
+# even though the length of first reads is shorter (300 bp) than the length of merged
+# reads (~500).
+#
+# I need to know how the Ns are distributed.
+
+for i in `seq 1 24`; do
+   if [ ! -e pe/${NEWNAME[$i]}.Ns ]; then
+      echo -e "# First\tBoth" > pe/${NEWNAME[$i]}.Ns
+      gawk -f countNpe.awk pe/edits/${NEWNAME[$i]}.derep >> pe/${NEWNAME[$i]}.Ns
+   fi
+
+   if [ ! -e se/${NEWNAME[$i]}.Ns ]; then
+      gawk -f countNse.awk se/edits/${NEWNAME[$i]}.derep > se/${NEWNAME[$i]}.Ns
+   fi
+done
+
+if [ ! -e Ns.png ]; then
+   R --no-save < plot02.R
 fi
+
+# The plot Ns.png shows that indeed the non-merged reads contain higher proportions
+# of Ns. This was not expected if non-merged reads were just sequenced from long templates
+# with the same average base quality than merged reads. I realize a large portion of
+# non merged reads have not been merged because of the poor quality of the second or
+# also the first read. This encourages me to try to cluster non-merged, first reads
+# with merged reads.
+#
+# Non-merged, first reads can have up to 10% of Ns, while merged reads rarely go
+# above 5%. This percentages coincide roughly with the (di)similarity thresholds at
+# which the number of clusters start growing: clustering thresholds above 90% similarity
+# make the number of clusters grow much faster among non-merged reads; while the
+# fast increase in the number of clusters of merged reads happens only around the
+# 95% similarity threshold. This confirms the Ns (not paralogs) are driving the split
+# of clusters with increasing similarity thresholds.
+#
+# This amounts to argue that it is safe to use a relatively low similarity threshold,
+# because I don't expect a large number of clusters to be affected by paralogs.
+#
+# Sibelle Vilaça called my attention about missing reads: while step 3 in pyrad is
+# not a filtering step, counting the number of reads in .derep and .clustS files
+# shows a number of reads are missing. Curiously, the lower the similarity threshold,
+# the larger the number of reads missing. This explains why the mean depth of clusters
+# peak around thresholds 86% (non-merged) or 92% (merged), right before dropping. Those
+# peaks were not expected if the number of reads being clustered were always the same.
+#
+# The fact is that step 3 filters out some reads that are first assigned to a cluster,
+# and then discarded on the grounds of having too many gaps. The number of gaps in the
+# pairwise comparison performed by vsearch is reported in .u files. The distributions
+# may give hints on the optimum value of the maximum number of gaps allowed.
