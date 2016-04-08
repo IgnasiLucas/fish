@@ -17,14 +17,27 @@ for (j in 1:4) {
       type="n", xlab="Clustering threshold", ylab=ylabs[j],
       main=main.first[j], cex.main=2, cex.lab=2, cex.axis=2, lwd=2)
    for (i in 1:24) {
-      lines(x.pe, pe[i,seq(from=j, by=4, to=dim(pe)[2])])
+      lines(x.pe, pe[i,seq(from=j, by=4, to=dim(pe)[2])], lwd=2)
    }
 
    plot(c(73,100), c(min(se[se[,j] > 1, seq(from=j, by=4, to=dim(se)[2])]), max(se[,seq(from=j, by=4, to=dim(se)[2])])), 
       type="n", xlab="Clustering threshold", ylab=ylabs[j],
-      main=main.second[j], cex.main=2, cex.lab=2, cex.axis=2, lwd=2)
+      main=main.second[j], cex.main=2, cex.lab=2, cex.axis=2)
    for (i in c(1:24)) {
-      lines(x.se, se[i,seq(from=j, by=4, to=dim(se)[2])])
+      lines(x.se, se[i,seq(from=j, by=4, to=dim(se)[2])], lwd=2)
    }
    dev.off()
 }
+
+
+png(filename="clustNum1plot.png", width=1000, height=1000)
+par(mex=2)
+plot(c(73,100), c(min(min( pe[pe[,1] > 1, seq(from=1, by=4, to=dim(pe)[2])] ), min( se[se[,1]>1, seq(from=1, by=4, to=dim(se)[2])] )),
+                  max(max( pe[pe[,1] > 1, seq(from=1, by=4, to=dim(pe)[2])] ), max( se[se[,1]>1, seq(from=1, by=4, to=dim(se)[2])] ))),
+     type = "n", xlab = "Clustering threshold", ylab = "Number of clusters",
+     main = "Non-merged (red) and merged (blue) reads", cex.main=2, cex.lab=2, cex.axis=2)
+for (i in 1:24) {
+   lines(x.pe, pe[i, seq(from=1, by=4, to=dim(pe)[2])], col="red", lwd=2)
+   lines(x.se, se[i, seq(from=1, by=4, to=dim(se)[2])], col="blue", lwd=2)
+}
+dev.off()

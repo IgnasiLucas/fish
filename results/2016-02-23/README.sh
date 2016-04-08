@@ -106,7 +106,7 @@ cd ../se
    fi
 cd ..
 
-for i in 74 76 78 80 82 84 86 88 90 92 94 96 98 99; do
+for i in 74 76 78 80 82 84 86 88 90 92 94 96 98; do
    cd pe
       if [ ! -e stats/s3.clusters$i.txt ]; then
          pyrad -p clust$i.txt -s 3 1> clust$i.log 2> clust$i.err
@@ -121,7 +121,7 @@ for i in 74 76 78 80 82 84 86 88 90 92 94 96 98 99; do
 done
 
 for i in pe se; do
-   if [ -e $i/summary.txt ]; then
+   if [ -e $i/summary.txt ] && [ ! -e clustNum1plot.png ]; then
       gawk -f summary.awk $i/stats/s3.clusters* > $i/summary.txt
       R --no-save < plot.R
    fi
@@ -147,18 +147,20 @@ done
 # I need to know how the Ns are distributed.
 
 for i in `seq 1 24`; do
-   if [ ! -e pe/${NEWNAME[$i]}.Ns ]; then
+   if [ ! -e pe/${NEWNAME[$i]}.Ns ] && [ ! -e Ns.png ]; then
       echo -e "# First\tBoth" > pe/${NEWNAME[$i]}.Ns
       gawk -f countNpe.awk pe/edits/${NEWNAME[$i]}.derep >> pe/${NEWNAME[$i]}.Ns
    fi
 
-   if [ ! -e se/${NEWNAME[$i]}.Ns ]; then
+   if [ ! -e se/${NEWNAME[$i]}.Ns ] && [ ! -e Ns.png ]; then
       gawk -f countNse.awk se/edits/${NEWNAME[$i]}.derep > se/${NEWNAME[$i]}.Ns
    fi
 done
 
 if [ ! -e Ns.png ]; then
    R --no-save < plot02.R
+   rm pe/*.Ns
+   rm se/*.Ns
 fi
 
 # The plot Ns.png shows that indeed the non-merged reads contain higher proportions
@@ -190,3 +192,25 @@ fi
 # and then discarded on the grounds of having too many gaps. The number of gaps in the
 # pairwise comparison performed by vsearch is reported in .u files. The distributions
 # may give hints on the optimum value of the maximum number of gaps allowed.
+
+for i in pe se; do
+   if [ ! -e $i/gaps.txt ]; then
+      echo "#Num.gaps" > $i/gaps.txt
+      # I don't care about sequences with more than 35 gaps.
+      seq 0 35 >> $i/gaps.txt
+      for j in 74 76 78 80 82 84 86 88 90 92 94 96 98; do
+         echo "T=0.$j" > z1
+         # Because the threshold of maximum number of gaps is applied to all samples,
+         # there is no point in counting gaps in individual samples. I get the summation
+         # of reads with x gaps across samples.
+         find $i/clust.$j/ -name '*.u' | xargs gawk -f countGaps.awk >> z1
+         paste $i/gaps.txt z1 > z2
+         mv z2 $i/gaps.txt
+         rm z1
+      done
+   fi
+done
+
+if [ ! -e gaps.png ]; then
+   R --save < plot03.R
+fi
