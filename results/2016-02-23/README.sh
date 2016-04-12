@@ -214,3 +214,5 @@ done
 if [ ! -e gaps.png ]; then
    R --save < plot03.R
 fi
+
+# Conclusion: Clustering threshold shoudl be 0.86, and maximum number of indels, 5.

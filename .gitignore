@@ -72,4 +72,15 @@ results/2016-02-16/stats/
 results/2016-02-18/nexus/
 .RData
 .Rhistory
+results/2016-02-22/pe/
+results/2016-02-22/se/
+results/2016-02-23/pe/clust*
+results/2016-02-23/se/clust*
+results/2016-02-23/pe/edits
+results/2016-02-23/se/edits
+results/2016-02-23/pe/fastq
+results/2016-02-23/se/fastq
+results/2016-04-11/BlCl0091._temp
+results/2016-04-11/BlCl0091.fasta
+results/2016-04-11/BlCl0091.u
 

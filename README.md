@@ -9,6 +9,12 @@ Every day I start an analysis, I name a new folder after the date.
 
 Here, I have a brief summary of each analysis, in reverse chronological order.
 
+2016-04-11
+----------
+Check if first reads of non-merged pairs cluster together with merged reads.
+I am using reads from only one sample, and running vsearch directly. By the
+way, vsearch is much more functional than I thougth. Worth learning.
+
 2016-02-23
 ----------
 I run Pyrad's step 3 (clustering within samples) with different values of the
@@ -25,6 +31,9 @@ discards a larger portion of reads, the lower the similarity threshold is).
 
 Note that a more efficient pipeline to determine optimal clustering thresholds
 could be implemented using vsearch directly, and/or subsampling the reads.
+
+Conclusion: The clustering threshold should be 86%, for either merged or non-
+merged reads. The maximum number of indels, 5.
 
 2016-02-22
 ----------
