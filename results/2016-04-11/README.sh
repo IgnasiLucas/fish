@@ -18,11 +18,6 @@
 # I do not need to run all samples, but just one. They all have behaved quite
 # similarly (except St0006), till now. I choose BlCl0091.
 #
-# Before, I used demultiplexed reads (instead of trimmed, see 2015-12-16b),
-# because I used pyrad to trim the reads. Now, if I use vsearch directly,
-# I'd better use the trimmed reads.
-
-FASTQ=`pwd | sed "s_2016-02-23_2015-12-16b/trimmed_"`
 
 if [ ! -e BlCl0091.fasta ]; then
    cp ../2016-02-23/se/edits/BlCl0091.derep BlCl0091.fasta
