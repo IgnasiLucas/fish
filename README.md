@@ -15,6 +15,7 @@ Check if first reads of non-merged pairs cluster together with merged reads.
 I am using reads from only one sample, and running vsearch directly. By the
 way, vsearch is much more functional than I thougth. Worth learning.
 
+
 2016-02-23
 ----------
 I run Pyrad's step 3 (clustering within samples) with different values of the

@@ -1,0 +1,6 @@
+# Type_of_hit      	Freq.	Ident.	Gaps
+Non-merged self-hit	261056	92.9803	2.43714
+Merged self-hit    	202574	94.223	4.4491
+Cross-hit          	219029	92.1468	5.8409
+Non-merged singletons	209932	-	-
+Merged singletons	281981	-	-
