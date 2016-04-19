@@ -19,12 +19,12 @@
 # similarly (except St0006), till now. I choose BlCl0091.
 #
 
-if [ ! -e BlCl0091.fasta ]; then
+if [ ! -e BlCl0091.fasta ] && [ ! -e summary.txt ]; then
    cp ../2016-02-23/se/edits/BlCl0091.derep BlCl0091.fasta
    gawk '(/^>/){sub(/>/,">R1_"); print}(/^[^>]/){print}' ../2016-02-23/pe/edits/BlCl0091.firsts >> BlCl0091.fasta
 fi
 
-if [ ! -e BlCl0091.u ]; then
+if [ ! -e BlCl0091.u ] && [ ! -e summary.txt ]; then
    vsearch --cluster_size BlCl0091.fasta \
            --threads 64 \
            --leftjust \
@@ -61,6 +61,13 @@ if [ ! -e summary.txt ]; then
    echo -e "Non-merged singletons\t$R1SINGLE\t-\t-" >> summary.txt
    echo -e "Merged singletons\t$BLSINGLE\t-\t-" >> summary.txt
 fi
+
+# Clean up
+for i in fasta u _temp; do
+   if [ -e summary.txt ] && [ -e BlCl0091.$i ]; then
+      rm BlCl0091.$i
+   fi
+done
 
 # Conclusion
 # ----------

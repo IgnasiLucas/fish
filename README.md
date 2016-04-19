@@ -9,11 +9,24 @@ Every day I start an analysis, I name a new folder after the date.
 
 Here, I have a brief summary of each analysis, in reverse chronological order.
 
+2016-04-13
+----------
+I will use bbmerge, from the bbmap package, to attempt more permissive merging
+of at least one sample, to check if that removes the problem of split clusters
+between merged and non-merged reads.
+
+
 2016-04-11
 ----------
 Check if first reads of non-merged pairs cluster together with merged reads.
 I am using reads from only one sample, and running vsearch directly. By the
-way, vsearch is much more functional than I thougth. Worth learning.
+way, vsearch is much more functional than I thougth. Worth learning. 
+
+Conclusion: Among the 951073 non-merged (unique) reads from BlCl0091, 219029 (23%)
+have their most similar read among merged reads. This is an important
+number of reads that can increase the coverage of several loci. However,
+the number of non-merged-specific loci is even higher, and should not
+be discarded.
 
 
 2016-02-23
