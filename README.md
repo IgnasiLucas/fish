@@ -11,9 +11,10 @@ Here, I have a brief summary of each analysis, in reverse chronological order.
 
 2016-04-13
 ----------
-I will use bbmerge, from the bbmap package, to attempt more permissive merging
+I used bbmerge, from the bbmap package, to attempt more permissive merging
 of at least one sample, to check if that removes the problem of split clusters
-between merged and non-merged reads.
+between merged and non-merged reads. Conclusion: de novo assemblies, based
+on k-mers, are not more sensitive than PEAR. This option is discarded.
 
 
 2016-04-11

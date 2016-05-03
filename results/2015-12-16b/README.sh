@@ -48,7 +48,7 @@ done
 # on the first base.
 for j in 1 7 13 19; do
    for i in `seq $j $(( $j + 5 ))`; do
-      if [ ! -e merged/${SAMPLE[$i]}.assembled.fastq ]; then
+      if [ ! -e merged/${SAMPLE[$i]}.assembled.fastq ] && [ ! -e merged/${SAMPLE[$i]}.assembled.fastq.gz ]; then
          pear -f joined/${SAMPLE[$i]}_R1.fastq.gz \
               -r joined/${SAMPLE[$i]}_R2.fastq.gz \
               --output merged/${SAMPLE[$i]} \
@@ -86,7 +86,7 @@ wait
 ## afterwards.
 #for j in 1 4 7 10 13 16 19 22; do
 #   for i in `seq $j $(( $j + 2 ))`; do
-#      if [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq ]; then
+#      if [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq.gz ]; then
 #         echo "${BARCODE[$i]} demultiplexed/${SAMPLE[$i]}_R1.fastq demultiplexed/${SAMPLE[$i]}_R2.fastq" > demultiplexed/${SAMPLE[$i]}.pe.barcode
 #         echo "${BARCODE[$i]} demultiplexed/${SAMPLE[$i]}.fastq" > demultiplexed/${SAMPLE[$i]}.barcode
 #         sabre pe -m 1 \
@@ -122,16 +122,16 @@ for i in `seq 1 24`; do
    # I notice that many reads miss the first base, and the truncated barcode is not
    # recognized. I will run pyrad's step 1 twice, once with the complete barcode and
    # 1 mismatch allowed, and once with the truncated barcode, without any mismatch allowed.
-   if [ ! -e demultiplexed/${SAMPLE[$i]}/barcode.2 ] && [ ! -e demultiplexed/${SAMPLE[$i]}.fastq ]; then
+   if [ ! -e demultiplexed/${SAMPLE[$i]}/barcode.2 ] && [ ! -e demultiplexed/${SAMPLE[$i]}.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}.fastq.gz ]; then
       gawk '{print $1 "\t" substr($2,2)}' demultiplexed/${SAMPLE[$i]}/barcode.1 > demultiplexed/${SAMPLE[$i]}/barcode.2
    fi
-   if [ ! -e demultiplexed/${SAMPLE[$i]}_R1_.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq ]; then
+   if [ ! -e demultiplexed/${SAMPLE[$i]}_R1_.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq.gz ]; then
       ln -s `pwd`"/merged/${SAMPLE[$i]}.unassembled.forward.fastq" demultiplexed/${SAMPLE[$i]}_R1_.fastq
    fi
-   if [ ! -e demultiplexed/${SAMPLE[$i]}_R2_.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R2.fastq ]; then
+   if [ ! -e demultiplexed/${SAMPLE[$i]}_R2_.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R2.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R2.fastq.gz ]; then
       ln -s `pwd`"/merged/${SAMPLE[$i]}.unassembled.reverse.fastq" demultiplexed/${SAMPLE[$i]}_R2_.fastq
    fi
-   if [ ! -e demultiplexed/${SAMPLE[$i]}/params_1.txt ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq ]; then
+   if [ ! -e demultiplexed/${SAMPLE[$i]}/params_1.txt ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq.gz ]; then
       pyrad -n
       sed -i '/## 1. /c\demultiplexed/'${SAMPLE[$i]}'/pe_full/   ## 1. Working directory                                 (all)' params.txt
       sed -i '/## 2. /c\demultiplexed/'${SAMPLE[$i]}'*.fastq     ## 2. Loc. of non-demultiplexed files (if not line 18)  (s1)' params.txt
@@ -142,7 +142,7 @@ for i in `seq 1 24`; do
       sed -i '/## 19./c\1                                        ## 19.opt.: maxM: N mismatches in barcodes (def= 1)          (s1)' params.txt
       mv params.txt demultiplexed/${SAMPLE[$i]}/params_1.txt
    fi
-   if [ ! -e demultiplexed/${SAMPLE[$i]}/params_2.txt ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq ]; then
+   if [ ! -e demultiplexed/${SAMPLE[$i]}/params_2.txt ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq.gz ]; then
       pyrad -n
       sed -i '/## 1. /c\demultiplexed/'${SAMPLE[$i]}'/pe_trunc/  ## 1. Working directory                                 (all)' params.txt
       sed -i '/## 2. /c\demultiplexed/'${SAMPLE[$i]}'*.fastq     ## 2. Loc. of non-demultiplexed files (if not line 18)  (s1)' params.txt
@@ -153,7 +153,7 @@ for i in `seq 1 24`; do
       sed -i '/## 19./c\0                                        ## 19.opt.: maxM: N mismatches in barcodes (def= 1)          (s1)' params.txt
       mv params.txt demultiplexed/${SAMPLE[$i]}/params_2.txt
    fi
-   if [ ! -e demultiplexed/${SAMPLE[$i]}/params_3.txt ] && [ ! -e demultiplexed/${SAMPLE[$i]}.fastq ]; then
+   if [ ! -e demultiplexed/${SAMPLE[$i]}/params_3.txt ] && [ ! -e demultiplexed/${SAMPLE[$i]}.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}.fastq.gz ]; then
       pyrad -n
       sed -i '/## 1. /c\demultiplexed/'${SAMPLE[$i]}'/se_full/   ## 1. Working directory                                 (all)' params.txt
       sed -i '/## 2. /c\merged/'${SAMPLE[$i]}'.assembled.fastq   ## 2. Loc. of non-demultiplexed files (if not line 18)  (s1)' params.txt
@@ -164,7 +164,7 @@ for i in `seq 1 24`; do
       sed -i '/## 19./c\1                                        ## 19.opt.: maxM: N mismatches in barcodes (def= 1)          (s1)' params.txt
       mv params.txt demultiplexed/${SAMPLE[$i]}/params_3.txt
    fi
-   if [ ! -e demultiplexed/${SAMPLE[$i]}/params_4.txt ] && [ ! -e demultiplexed/${SAMPLE[$i]}.fastq ]; then
+   if [ ! -e demultiplexed/${SAMPLE[$i]}/params_4.txt ] && [ ! -e demultiplexed/${SAMPLE[$i]}.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}.fastq.gz ]; then
       pyrad -n
       sed -i '/## 1. /c\demultiplexed/'${SAMPLE[$i]}'/se_trunc/  ## 1. Working directory                                 (all)' params.txt
       sed -i '/## 2. /c\merged/'${SAMPLE[$i]}'.assembled.fastq   ## 2. Loc. of non-demultiplexed files (if not line 18)  (s1)' params.txt
@@ -175,22 +175,22 @@ for i in `seq 1 24`; do
       sed -i '/## 19./c\0                                        ## 19.opt.: maxM: N mismatches in barcodes (def= 1)          (s1)' params.txt
       mv params.txt demultiplexed/${SAMPLE[$i]}/params_4.txt
    fi
-   if [ ! -e demultiplexed/${SAMPLE[$i]}/pe_full/stats/s1.sorting.txt ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq ]; then
+   if [ ! -e demultiplexed/${SAMPLE[$i]}/pe_full/stats/s1.sorting.txt ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq.gz ]; then
       pyrad -p demultiplexed/${SAMPLE[$i]}/params_1.txt -s 1 &
    fi
-   if [ ! -e demultiplexed/${SAMPLE[$i]}/pe_trunc/stats/s1.sorting.txt ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq ]; then
+   if [ ! -e demultiplexed/${SAMPLE[$i]}/pe_trunc/stats/s1.sorting.txt ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq.gz ]; then
       pyrad -p demultiplexed/${SAMPLE[$i]}/params_2.txt -s 1 &
    fi
-   if [ ! -e demultiplexed/${SAMPLE[$i]}/se_full/stats/s1.sorting.txt ] && [ ! -e demultiplexed/${SAMPLE[$i]}.fastq ]; then
+   if [ ! -e demultiplexed/${SAMPLE[$i]}/se_full/stats/s1.sorting.txt ] && [ ! -e demultiplexed/${SAMPLE[$i]}.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}.fastq.gz ]; then
       pyrad -p demultiplexed/${SAMPLE[$i]}/params_3.txt -s 1 &
    fi
-   if [ ! -e demultiplexed/${SAMPLE[$i]}/se_trunc/stats/s1.sorting.txt ] && [ ! -e demultiplexed/${SAMPLE[$i]}.fastq ]; then
+   if [ ! -e demultiplexed/${SAMPLE[$i]}/se_trunc/stats/s1.sorting.txt ] && [ ! -e demultiplexed/${SAMPLE[$i]}.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}.fastq.gz ]; then
       pyrad -p demultiplexed/${SAMPLE[$i]}/params_4.txt -s 1 &
    fi
 done
 wait
 for i in `seq 1 24`; do
-   if [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq ]; then
+   if [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq.gz ]; then
       if [ `head -n 2 demultiplexed/${SAMPLE[$i]}/pe_trunc/stats/s1.sorting.txt | tail -n 1 | cut -f 4` -gt 0 ]; then
          cat_seqs -t fastq -o demultiplexed/${SAMPLE[$i]}_R1.fastq \
             demultiplexed/${SAMPLE[$i]}/pe_full/fastq/${SAMPLE[$i]}_R1.fq.gz \
@@ -200,7 +200,7 @@ for i in `seq 1 24`; do
             demultiplexed/${SAMPLE[$i]}/pe_full/fastq/${SAMPLE[$i]}_R1.fq.gz &
       fi
    fi
-   if [ ! -e demultiplexed/${SAMPLE[$i]}_R2.fastq ]; then
+   if [ ! -e demultiplexed/${SAMPLE[$i]}_R2.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}_R2.fastq.gz ]; then
       if [ `head -n 2 demultiplexed/${SAMPLE[$i]}/pe_trunc/stats/s1.sorting.txt | tail -n 1 | cut -f 4` -gt 0 ]; then
          cat_seqs -t fastq -o demultiplexed/${SAMPLE[$i]}_R2.fastq \
             demultiplexed/${SAMPLE[$i]}/pe_full/fastq/${SAMPLE[$i]}_R2.fq.gz \
@@ -210,7 +210,7 @@ for i in `seq 1 24`; do
             demultiplexed/${SAMPLE[$i]}/pe_full/fastq/${SAMPLE[$i]}_R2.fq.gz &
       fi
    fi
-   if [ ! -e demultiplexed/${SAMPLE[$i]}.fastq ]; then
+   if [ ! -e demultiplexed/${SAMPLE[$i]}.fastq ] && [ ! -e demultiplexed/${SAMPLE[$i]}.fastq.gz ]; then
       if [ `head -n 2 demultiplexed/${SAMPLE[$i]}/se_trunc/stats/s1.sorting.txt | tail -n 1 | cut -f 4` -gt 0 ]; then
          cat_seqs -t fastq -o demultiplexed/${SAMPLE[$i]}.fastq \
             demultiplexed/${SAMPLE[$i]}/se_full/fastq/${SAMPLE[$i]}_R1.fq.gz \
@@ -233,7 +233,7 @@ done
 # Now, we trim assembled and unassembled reads separately as well. Hopefully,
 # assembled reads should not need much trimming.
    for i in `seq 1 24`; do
-      if [ ! -e trimmed/${SAMPLE[$i]}_R1.fastq ]; then
+      if [ ! -e trimmed/${SAMPLE[$i]}_R1.fastq ] && [ ! -e trimmed/${SAMPLE[$i]}_R1.fastq.gz ]; then
          BARCODEREV=`echo ${BARCODE[$i]} | gawk -f revcomp.awk`
          cutadapt -a CGAGATCGGAAGAGCACACGTCTGAACTCCAGTCAC \
                   -A "TA"$BARCODEREV"AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT" \
@@ -251,6 +251,38 @@ done
       fi
    done
    wait
+
+## Clean up.
+for i in `seq 1 24`; do
+   if [ ! -e demultiplexed/${SAMPLE[$i]}.fastq.gz ] && [ -e demultiplexed/${SAMPLE[$i]}.fastq ]; then
+      gzip demultiplexed/${SAMPLE[$i]}.fastq &
+   fi
+   if [ ! -e demultiplexed/${SAMPLE[$i]}_R1.fastq.gz ] && [ -e demultiplexed/${SAMPLE[$i]}_R1.fastq ]; then
+      gzip demultiplexed/${SAMPLE[$i]}_R1.fastq &
+   fi
+   if [ ! -e demultiplexed/${SAMPLE[$i]}_R2.fastq.gz ] && [ -e demultiplexed/${SAMPLE[$i]}_R2.fastq ]; then
+      gzip demultiplexed/${SAMPLE[$i]}_R2.fastq &
+   fi
+   if [ ! -e merged/${SAMPLE[$i]}.assembled.fastq.gz ] && [ -e merged/${SAMPLE[$i]}.assembled.fastq ]; then
+      gzip merged/${SAMPLE[$i]}.assembled.fastq &
+   fi
+   if [ ! -e merged/${SAMPLE[$i]}.unassembled.forward.fastq.gz ] && [ -e merged/${SAMPLE[$i]}.unassembled.forward.fastq ]; then
+      gzip merged/${SAMPLE[$i]}.unassembled.forward.fastq.gz &
+   fi
+   if [ ! -e merged/${SAMPLE[$i]}.unassembled.reverse.fastq.gz ] && [ -e merged/${SAMPLE[$i]}.unassembled.reverse.fastq ]; then
+      gzip merged/${SAMPLE[$i]}.unassembled.reverse.fastq &
+   fi
+   if [ ! -e trimmed/${SAMPLE[$i]}.fastq.gz ] && [ -e trimmed/${SAMPLE[$i]}.fastq ]; then
+      gzip trimmed/${SAMPLE[$i]}.fastq &
+   fi
+   if [ ! -e trimmed/${SAMPLE[$i]}_R1.fastq.gz ] && [ -e trimmed/${SAMPLE[$i]}_R1.fastq ]; then
+      gzip trimmed/${SAMPLE[$i]}_R1.fastq &
+   fi
+   if [ ! -e trimmed/${SAMPLE[$i]}_R2.fastq.gz ] && [ -e trimmed/${SAMPLE[$i]}_R2.fastq ]; then
+      gzip trimmed/${SAMPLE[$i]}_R2.fastq &
+   fi
+   wait
+done
 
 ## Clean up.
 #for i in `seq 1 24`; do

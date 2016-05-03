@@ -23,14 +23,14 @@ if [ ! -d se/fastq ]; then mkdir se/fastq; fi
 # I need to specify not only the origin, (St or Bl) but either the species or
 # the morphotype in the sample name.
 for i in `seq 1 24`; do
-   if [ ! -e pe/fastq/${NEWNAME[$i]}_R1.fastq ]; then
-      ln -s $FASTQ/${SAMPLE[$i]}_R1.fastq pe/fastq/${NEWNAME[$i]}_R1.fastq
+   if [ ! -e pe/fastq/${NEWNAME[$i]}_R1.fastq.gz ]; then
+      ln -s $FASTQ/${SAMPLE[$i]}_R1.fastq.gz pe/fastq/${NEWNAME[$i]}_R1.fastq.gz
    fi
-   if [ ! -e pe/fastq/${NEWNAME[$i]}_R2.fastq ]; then
-      ln -s $FASTQ/${SAMPLE[$i]}_R2.fastq pe/fastq/${NEWNAME[$i]}_R2.fastq
+   if [ ! -e pe/fastq/${NEWNAME[$i]}_R2.fastq.gz ]; then
+      ln -s $FASTQ/${SAMPLE[$i]}_R2.fastq.gz pe/fastq/${NEWNAME[$i]}_R2.fastq.gz
    fi
-   if [ ! -e se/fastq/${NEWNAME[$i]}.fastq ]; then
-      ln -s $FASTQ/${SAMPLE[$i]}.fastq se/fastq/${NEWNAME[$i]}.fastq
+   if [ ! -e se/fastq/${NEWNAME[$i]}.fastq.gz ]; then
+      ln -s $FASTQ/${SAMPLE[$i]}.fastq.gz se/fastq/${NEWNAME[$i]}.fastq.gz
    fi
 done
 
@@ -216,3 +216,19 @@ if [ ! -e gaps.png ]; then
 fi
 
 # Conclusion: Clustering threshold shoudl be 0.86, and maximum number of indels, 5.
+#
+# Cleaning up
+# -----------
+# I remove the clust.* and edits folders, that use too much disk space.
+
+if [ -d pe/edits ]; then rm -r pe/edits; fi
+if [ -d se/edits ]; then rm -r se/edits; fi
+for i in 74 76 78 80 82 84 86 88 90 92 94 96 98 99; do
+   if [ -d pe/clust.$i ]; then
+      rm -r pe/clust.$i
+   fi
+   if [ -d se/clust.$i ]; then
+      rm -r se/clust.$i
+   fi
+done
+
