@@ -9,6 +9,22 @@ Every day I start an analysis, I name a new folder after the date.
 
 Here, I have a brief summary of each analysis, in reverse chronological order.
 
+2016-05-10
+----------
+Before the process started in folder 2016-05-03 to build consensus sequences
+for merged reads, I start the same process again, with 32 threads, to check
+if that is going to be much faster.
+
+2016-05-03
+----------
+I implement here the idea of creating a reference genome with the consensus
+of the merged reads from all samples, in order to map later both merged and
+non-merged reads against this reference. Only unmapped reads would then be
+processed separately with pyrad. The only problem here is that to cluster
+merged reads (relatively long) with pyrad (which in turn calls vsearch) is
+very slow. The estimated time is more than 3 months. Unfortunately, the process
+started running with only 6 threads, due to an error.
+
 2016-04-13
 ----------
 I used bbmerge, from the bbmap package, to attempt more permissive merging
