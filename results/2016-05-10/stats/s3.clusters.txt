@@ -1,0 +1,32 @@
+
+taxa	total	dpt.me	dpt.sd	d>0.tot	d>0.me	d>0.sd	badpairs
+pooled	2601328	1.901	6.898	2601328	1.901	6.898	0
+
+    ## total = total number of clusters, including singletons
+    ## dpt.me = mean depth of clusters
+    ## dpt.sd = standard deviation of cluster depth
+    ## >N.tot = number of clusters with depth greater than N
+    ## >N.me = mean depth of clusters with depth greater than N
+    ## >N.sd = standard deviation of cluster depth for clusters with depth greater than N
+    ## badpairs = mismatched 1st & 2nd reads (only for paired ddRAD data)
+
+HISTOGRAMS
+
+    
+sample: pooled
+bins	depth_histogram	cnts
+   :	0------------50-------------100%
+0 	******************************      2496887
+5 	**                                  45983
+10 	*                                   17182
+15 	*                                   10933
+20 	*                                   7915
+25 	*                                   5336
+30 	*                                   3521
+35 	*                                   2310
+40 	*                                   2856
+50 	*                                   5794
+100 	*                                   2526
+250 	*                                   64
+500 	*                                   21
+

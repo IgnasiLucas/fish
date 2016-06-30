@@ -9,11 +9,17 @@ Every day I start an analysis, I name a new folder after the date.
 
 Here, I have a brief summary of each analysis, in reverse chronological order.
 
+2016-06-29
+----------
+Mapping the reads on the consensus of the clusters produced by pyrad from the
+pooled merged reads.
+
 2016-05-10
 ----------
-Before the process started in folder 2016-05-03 to build consensus sequences
+Before the process finished in folder 2016-05-03 to build consensus sequences
 for merged reads, I start the same process again, with 32 threads, to check
-if that is going to be much faster.
+if that is going to be much faster. Indeed, after a couple of days, it was
+clear that 32 threads speed up the clustering step by a factor of at least 3.
 
 2016-05-03
 ----------

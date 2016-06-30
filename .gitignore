@@ -3,7 +3,7 @@
 *.fastq
 *.fastq.gz
 z*
-data/*
+data
 doc/*.aux
 doc/*.out
 doc/*.blg
