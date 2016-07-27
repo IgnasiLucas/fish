@@ -41,33 +41,81 @@ for i in `seq 1 23`; do
 done
 
 if [ ! -e fish.1.bt2 ]; then
-   bowtie2-build -seed 3817 --threads 4 $DATADIR/consensus.fa fish
+   bowtie2-build $DATADIR/consensus.fa fish
 fi
 
-for i in `seq 1 23`; do
-   if [ ! -e ${SAMPLE[$i]}.se.sam ]; then
-      bowtie2 --sensitive \
-              --rg-id ${SAMPLE[$i]} \
-              --rg "PL:ILLUMINA" \
-              --rg "DT:2016" \
-              --rg "SM:"${SAMPLE[$i]} \
-              --un ${SAMPLE[$i]}.se.unmapped.fastq \
-              -x fish -U ${SAMPLE[$i]}.fastq \
-              -S ${SAMPLE[$i]}.se.sam &> ${SAMPLE[$i]}.se.bowtie2.log &
+function map_single_ends {
+   bowtie2 --sensitive \
+           --rg-id $1 \
+           --rg "PL:ILLUMINA" \
+           --rg "DT:2016" \
+           --rg "SM:"$1 \
+           --un $1.se.unmapped.fastq \
+           -x fish -U $1.fastq \
+           -S $1.se.sam &> $1.se.bowtie2.log
+}
 
-   fi
-done
-wait
-for i in `seq 1 23`; do
-   if [ ! -e ${SAMPLE[$i]}.pe.sam ]; then
-      bowtie2 --sensitive \
-              --maxins 600 \
-              --rg-id ${SAMPLE[$i]} \
-              --rg "PL:ILLUMINA" \
-              --rg "DT:2016" \
-              --rg "SM:"${SAMPLE[$i]} \
-              --un-conc ${SAMPLE[$i]}.pe.unmapped_R%.fastq \
-              -x fish -1 ${SAMPLE[$i]}_R1.fastq -2 ${SAMPLE[$i]}_R2.fastq \
-              -S ${SAMPLE[$i]}.pe.sam &> ${SAMPLE[$i]}.pe.bowtie2.log &
-   fi
-done
+function map_paired_ends {
+   bowtie2 --sensitive \
+           --maxins 600 \
+           --rg-id $1 \
+           --rg "PL:ILLUMINA" \
+           --rg "DT:2016" \
+           --rg "SM:"$1} \
+           --un-conc $1.pe.unmapped_R%.fastq \
+           -x fish -1 $1'_R1.fastq' -2 $1'_R2.fastq' \
+           -S $1.pe.sam &> $1.pe.bowtie2.log
+}
+
+PROC=`grep -P '^processor' /proc/cpuinfo | wc -l`
+
+if [ $PROC -gt 24 ]; then
+   for i in `seq 1 23`; do
+      if [ ! -e ${SAMPLE[$i]}.se.sam ]; then
+         map_single_ends ${SAMPLE[$i]} &
+      fi
+   done
+   wait
+   for i in `seq 1 23`; do
+      if [ ! -e ${SAMPLE[$i]}.pe.sam ]; then
+         map_paired_ends ${SAMPLE[$i]} &
+      fi
+   done
+   wait
+elif [ $PROC -ge 6 ]; then
+   for j in 1 7 13; do
+      for i in `seq $j $(( j + 5 ))`; do
+         if [ ! -e ${SAMPLE[$i]}.se.sam ]; then
+            map_single_ends ${SAMPLE[$i]} &
+         fi
+      done
+      wait
+      for i in `seq $j $(( j + 5 ))`; do
+         if [ ! -e ${SAMPLE[$i]}.pe.sam ]; then
+            map_paired_ends ${SAMPLE[$i]} &
+         fi
+      done
+      wait
+   done
+   for i in 19 20 21 22 23; do
+      if [ ! -e ${SAMPLE[$i]}.se.sam ]; then
+         map_single_ends ${SAMPLE[$i]} &
+      fi
+   done
+   wait
+   for i in 19 20 21 22 23; do
+      if [ ! -e ${SAMPLE[$i]}.pe.sam ]; then
+         map_paired_ends ${SAMPLE[$i]} &
+      fi
+   done
+   wait
+else
+   for i in `seq 1 23`; do
+      if [ ! -e ${SAMPLE[$i]}.se.sam ]; then
+         map_single_ends ${SAMPLE[$i]}
+      fi
+      if [ ! -e ${SAMPLE[$i]}.pe.sam ]; then
+         map_paired_ends ${SAMPLE[$i]}
+      fi
+   done
+fi
