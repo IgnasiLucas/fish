@@ -4,6 +4,7 @@
 *.fastq.gz
 z*
 *.bt2
+*.sam
 data
 doc/*.aux
 doc/*.out
