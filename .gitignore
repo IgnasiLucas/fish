@@ -3,6 +3,8 @@
 *.fastq
 *.fastq.gz
 z*
+*.bt2
+*.sam
 data
 doc/*.aux
 doc/*.out
@@ -93,3 +95,4 @@ results/2016-05-03/clust.86/
 results/2016-05-03/edits/
 results/2016-05-10/clust.86/
 results/2016-05-10/edits/
+results/.2016-07-26
