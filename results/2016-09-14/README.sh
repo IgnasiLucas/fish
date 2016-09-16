@@ -35,7 +35,7 @@ if [ ! -e fish.1.bt2 ]; then
 fi
 
 function map_single_ends {
-   bowtie2 --very-sensitive \
+   bowtie2 --sensitive \
            --rg-id $1 \
            --rg "PL:ILLUMINA" \
            --rg "DT:2016" \
@@ -52,3 +52,8 @@ for i in 13; do
    fi
 done
 
+# The --very-sensitive setting is just too slow when combined with the --all, and
+# it produces huge output. I saved a partial output for some statistics, and changed
+# the setting to --sensitive. In any case, it is clear that there are some contigs
+# that are very similar to each other. I will use this data to estimate how many
+# clusters there should really be. I may have to re-run the clustering step.
