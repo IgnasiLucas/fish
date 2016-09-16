@@ -46,7 +46,7 @@ fi
 
 for i in `seq 1 23`; do
    if [ ! -e ${SAMPLE[$i]}.se.sam ]; then
-      bowtie2 --sensitive \
+      bowtie2 --very-sensitive \
               --rg-id ${SAMPLE[$i]} \
               --rg "PL:ILLUMINA" \
               --rg "DT:2016" \
@@ -58,6 +58,7 @@ for i in `seq 1 23`; do
    fi
 done
 wait
+
 for i in `seq 1 23`; do
    if [ ! -e ${SAMPLE[$i]}.pe.sam ]; then
       bowtie2 --sensitive \
