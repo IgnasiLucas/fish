@@ -59,7 +59,6 @@ similarity clustering threshold. A high number of Ns requires a lower similarity
 clustering threshold. I also plot the distribution of proportion of Ns in reads.
 I conclude that the different response of clustering to similarity threshold
 between merged and non-merged reads is due to the different proportions of Ns.
-Unexpectedly, non-merged, first reads contain higher proportions of Ns.
 If many pairs did not merge because of low quality of second reads, as it seems,
 it may be worth to try to cluster non-merged, first reads together with merged
 reads. A similarity threshold as low as 84% seems adequate. The maximum number
