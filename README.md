@@ -3,16 +3,39 @@ Population Genomics of Fish
 
 I use the directory organization suggested by  William Stafford Noble
 (<http://dx.doi.org/10.1371/journal.pcbi.1000424>). On the top level, there
-are a few directories with intuitive, logical names: data (not tracked by
-git), results, and documents. Below that level, I use a chronological order.
+are a few directories with intuitive, logical names: data (not tracked),
+results, and documents. Below that level, I use a chronological order.
 Every day I start an analysis, I name a new folder after the date.
 
 Here, I have a brief summary of each analysis, in reverse chronological order.
 
+
+2016-09-19
+----------
+Here I check the effect of the maximum number of Ns allowed in a read on the
+number of clusters produced. The relationship is direct, almost lineal. But it
+seems to be caused by a corresponding increase in the number of reads available.
+
+2016-09-14
+----------
+Here, I repeat the mapping of reads from only one sample with different settings
+in order to report all the alternative mappings. I confirm that a large portion
+of reads map ambituously due to similarities among clusters. A manual alignment
+of consensus sequences of similar clusters makes me think that they are actually
+from the same locus but trimmed differently. Actually, I had not noticed before
+that pyrad trims way too many reads with the strict setting. 
+
 2016-06-29
 ----------
-Mapping the reads on the consensus of the clusters produced by pyrad from the
-pooled merged reads.
+In rough agreement with 2016-04-11, around 20% of non-merged reads map to the
+consensus sequences of clusters made with merged reads. That is to say that
+we cannot expect to improve the coverage of merged clusters by more than 20%
+when we map non-merged reads to them. The analysis also reveals a potential
+problem with the clusters built with merged reads in 2016-05-10: about 50%
+of merged reads map ambiguously to more than one consensus sequence. This
+implies that the mapping with bowtie2 is more sensitive than the clustering,
+and makes me suspect that the clustering is spuriously splitting some loci,
+maybe due to an excess of Ns in the reads.
 
 2016-05-10
 ----------
