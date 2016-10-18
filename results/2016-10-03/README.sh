@@ -232,7 +232,7 @@ if [ ! -e params.txt ]; then
    sed -i '/## 23./c\100                    ## 23.opt.: max N in consensus sequence (def. 5)        (s5)'       params.txt
    sed -i '/## 24./c\100                    ## 24.opt.: maxH: max heterozyg. sites in cons seq (def=5)   (s5)'  params.txt
    sed -i '/## 25./c\100                    ## 25.opt.: ploidy: max alleles in cons seq (def=2)     (s4,s5)'    params.txt
-   sed -i '/## 31./c\3                      ## 31.opt.: maj. base call at depth <x (def.x=mindepth) (s5)'       params.txt
+   sed -i '/## 31./c\1                      ## 31.opt.: maj. base call at depth <x (def.x=mindepth) (s5)'       params.txt
    sed -i '/## 32./c\50                     ## 32.opt.: keep trimmed reads (def=0). Enter min length(s2)'       params.txt
    sed -i '/## 37./c\50                     ## 37.opt.: vsearch max threads per job (def.=6)        (s3,s6)'    params.txt
 fi
@@ -241,3 +241,40 @@ if ! grep -q pyrad checkpoints; then
    echo pyrad >> checkpoints
    pyrad -p params.txt -s 235
 fi
+
+
+# The main difference between the analysis in 2016-05-10 and this is that in the
+# first one I trimmed the merged reads before clustering them. I suspected that the
+# trimming had caused problems of splitting clusters. And because the trimming of
+# merged reads was not necessary (PEAR takes care of adapters already), I repeated
+# the clustering of pooled merged reads. Another difference is that in 2016-05-10,
+# I allowed many Ns per read. On 2016-09-19 I show that more Ns per read result in
+# more clusters, although I did not prove that the effect is caused by cluster split.
+# Rather, it seems to be the result of a larger number of reads available and a low
+# coverage (clusters are not saturated). In any case, I compare below the statistics
+# of the two clustering runs:
+#
+#
+# -------------------------------------------------------------------------
+#                                      2016-05-10            2016-10-03
+# -------------------------------------------------------------------------
+#  Max. Ns per read
+#  Trimming
+#  Num. reads                        12221477              12221553
+#  Num. reads passed                   419194               4909041
+#  Num. reads passed w. trim.         8212006                     0
+#  Num. reads passed total            8631200               4909041
+#  Num. clusters/loci                 2601328               1662730
+#  Mean depth                               1.901                 1.727
+#  Depth standard deviation                 6.898                 4.512
+#  Num. clusters depth > 4                  0                 76417
+#  Mean depth (depth > 4)                   0                    12.971
+#  Deptph st. dev. (depth > 4)              0                    17.446
+#  Final num. loci                    2601292               1662703
+#  Total num. of sites             1118220309             637430427
+#  Num. of polymorphic sites           573092                463410
+#  Frequency of polymorphic sites           0.0005125             0.000727
+# -------------------------------------------------------------------------
+#
+# So, the number of loci decreased, but the coverage improved, which is a good
+# sign.

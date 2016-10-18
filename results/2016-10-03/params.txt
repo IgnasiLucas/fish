@@ -30,7 +30,7 @@ pooled.fastq.gz        ## 18.opt.: loc. of de-multiplexed data                 (
                        ## 28.opt.: random number seed (def. 112233)              (s3,s6,s7)
                        ## 29.opt.: trim overhang left,right on final loci, def(0,0) (s7)
                        ## 30.opt.: output formats: p,n,a,s,v,u,t,m,k,g,* (see docs) (s7)
-3                      ## 31.opt.: maj. base call at depth <x (def.x=mindepth) (s5)
+1                      ## 31.opt.: maj. base call at depth <x (def.x=mindepth) (s5)
 50                     ## 32.opt.: keep trimmed reads (def=0). Enter min length(s2)
                        ## 33.opt.: max stack size (int), def= max(500,mean+2*SD)    (s3)
                        ## 34.opt.: minDerep: exclude dereps with <= N copies, def=1 (s3)
