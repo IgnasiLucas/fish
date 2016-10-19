@@ -15,7 +15,8 @@
 # The fastq files are in 2016-10-03 (trimmed paired ends) or in 2016-10-03/merged
 # (merged reads, non-trimmed).
 
-DATADIR=`pwd | sed 's/results/data/'`
+PREVIOUS=`pwd | sed 's/2016-10-19/2016-06-29/'`
+ DATADIR=`pwd | sed 's/results/data/'`
 FASTQDIR=`pwd | sed 's/2016-10-19/2016-10-03/'`
 if [ ! -d $DATADIR ]; then mkdir $DATADIR; fi
 
@@ -146,7 +147,71 @@ fi
 gnuplot < summary_se.gnuplot
 gnuplot < summary_pe.gnuplot
 
+# This is to compare the current results with those from 2016-06-29. Because
+# samples behave similarly between the two clustering experiments, I compare
+# only the total numbers of reads.
+
+#if [ ! -e comparison.txt ]; then
+   echo "                       "  > z1
+   echo "Total merged reads     " >> z1
+   echo "   Uniquely mapped     " >> z1
+   echo "   Ambiguously mapped  " >> z1
+   echo "   Unmapped            " >> z1
+   echo                           >> z1
+   echo "Total pairs            " >> z1
+   echo "   Concordant, unique  " >> z1
+   echo "   Concor., ambiguous  " >> z1
+   echo "   Discordant          " >> z1
+   echo "   Unmapped            " >> z1
+   echo                           >> z1
+   echo "Mates in unmapped pairs" >> z1
+   echo "   Uniquely mapped     " >> z1
+   echo "   Ambiguously mapped  " >> z1
+   echo "   Unmapped            " >> z1
+
+   basename $PREVIOUS > z2
+   gawk -f totals.awk $PREVIOUS/summary*.txt >> z2
+
+   basename `pwd` > z3
+   gawk -f totals.awk ./summary*.txt >> z3
+
+   paste z1 z2 z3 > comparison.txt
+   rm z1 z2 z3
+#fi
+
+# -------------------------------------------------------------------------
+#                       	     2016-06-29	           2016-10-19
+# -------------------------------------------------------------------------
+# Total merged reads     	12221477          	12221553
+#    Uniquely mapped     	 5746594 ( 47.02 %)	 5641845 ( 46.16 %)
+#    Ambiguously mapped  	 5076638 ( 41.54 %)	 3321613 ( 27.18 %)
+#    Unmapped            	 1398245 ( 11.44 %)	 3258095 ( 26.66 %)
+#
+# Total pairs            	15671492          	15671492
+#    Concordant, unique  	 2694352 ( 17.19 %)	 1542739 (  9.84 %)
+#    Concor., ambiguous  	  804347 (  5.13 %)	  198427 (  1.27 %)
+#    Discordant          	  218040 (  1.39 %)	  408478 (  2.61 %)
+#    Unmapped            	11954753 ( 76.28 %)	13521848 ( 86.28 %)
+#
+# Mates in unmapped pairs	23909506          	27043696
+#    Uniquely mapped     	 2865898 ( 11.99 %)	 3951440 ( 14.61 %)
+#    Ambiguously mapped  	10004087 ( 41.84 %)	 8694552 ( 32.15 %)
+#    Unmapped            	11039521 ( 46.17 %)	14397704 ( 53.24 %)
+# -------------------------------------------------------------------------
+#
+#
 # CONCLUSIONS
 # -----------
 #
-
+# The current adjustment of parameters somewhat improved the clustering of
+# merged, pooled reads, but did not get rid of the split loci, as can be seen
+# from the still large portion of ambiguously mapped merged reads (27.18 %).
+# Therefore, it is urgent to move on along the following terms:
+#
+#    1. Give up the clusters of pooled merged reads as a potential reference
+#       to identify variants.
+#
+#    2. Discard any paired-ends that map in any way to the merged reads in
+#       the first analysis, and analyse the remaining 76% of unmapped paired
+#       ends separately from the merged reads, using ipyrad.
+#
