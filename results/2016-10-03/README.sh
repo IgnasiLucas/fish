@@ -150,7 +150,7 @@ if [ ! -d merged ]; then mkdir merged; fi
 for i in `seq 1 23`; do
    if ! grep -q ${NEWNAME[$i]}_merged checkpoints; then
       echo ${NEWNAME[$i]}_merged >> checkpoints
-      merge ${NEWNAME[$i]} > merged/${NEWNAME[$i]}.log &
+      merge ${NEWNAME[$i]} > merged/${NEWNAME[$i]}_other.log &
    fi
    if [ -s merged/${SAMPLE[$i]}.assembled.fastq ]; then
       rm ${SAMPLE[$i]}_demultiplexed_R*.fastq
@@ -278,3 +278,20 @@ fi
 #
 # So, the number of loci decreased, but the coverage improved, which is a good
 # sign.
+
+# ---------------------------------------------------------------------------
+# CLEAN UP
+# ---------------------------------------------------------------------------
+#
+# I can safely remove demultiplexed fastq files and unassembled reads.
+
+for i in `seq 1 23`; do
+   if grep -q ${NEWNAME[$i]}_merged checkpoints; then
+      rm ${NEWNAME[$i]}_demultiplexed_R1.fastq
+      rm ${NEWNAME[$i]}_demultiplexed_R2.fastq
+   fi
+   if grep -q ${NEWNAME[$i]}_trimmed_paired checkpoints; then
+      rm merged/${NEWNAME[$i]}.unassembled.forward.fastq
+      rm merged/${NEWNAME[$i]}.unassembled.reverse.fastq
+   fi
+done

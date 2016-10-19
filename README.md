@@ -9,6 +9,22 @@ Every day I start an analysis, I name a new folder after the date.
 
 Here, I have a brief summary of each analysis, in reverse chronological order.
 
+2016-10-19
+----------
+After obtaining the new set of loci, built from merged reads from all samples,
+I map both merged and unassembled reads to these loci, in order to: check for
+ambiguous mappings, indicative of split loci; and identify the paired-end reads
+that do not map to any merged locus, which can be processed with pyrad (ipyrad)
+separately.
+
+2016-10-03
+----------
+I repeat the clustering of pooled, merged reads performed before in 2016-05-10.
+This time, I do not trim merged reads before clustering, and relax the filtering
+behaviour of pyrad to prevent trimming. In turn, I require reads to have no more
+than 5 Ns. I end up using fewer reads, and obtaining fewer clusters. But the
+average depth of coverage is higher, which suggests that the spurious splitting
+of clusters observed before is not so important, at least.
 
 2016-09-19
 ----------
