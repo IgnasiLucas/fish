@@ -1,0 +1,15 @@
+
+ -------------------------------------------------------------
+  ipyrad [v.0.4.1]
+  Interactive assembly and analysis of RAD-seq data
+ -------------------------------------------------------------
+  loading Assembly: merged
+  from saved path: /data/joiglu/fish/results/2016-10-28/merged/merged.json
+  local compute node: [24 cores] on pascual-RS920-E7-RS8
+
+  Step 5: Consensus base calling 
+  Mean error  [0.01035 sd=0.00066]
+  Mean hetero [0.00842 sd=0.00066]
+  [####################] 100%  consensus calling     | 1:39:46 
+
+

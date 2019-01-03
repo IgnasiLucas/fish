@@ -1,0 +1,12 @@
+
+ -------------------------------------------------------------
+  ipyrad [v.0.4.1]
+  Interactive assembly and analysis of RAD-seq data
+ -------------------------------------------------------------
+  loading Assembly: paired
+  from saved path: /data/joiglu/fish/results/2016-10-28/paired/paired.json
+  local compute node: [24 cores] on pascual-RS920-E7-RS8
+
+  Step 6: Clustering across 23 samples at 0.86 similarity
+  [####################] 100%  concat/shuffle input  | 0:02:50 
+  [############        ]  63%  clustering across     | 53 days, 5:39:46 

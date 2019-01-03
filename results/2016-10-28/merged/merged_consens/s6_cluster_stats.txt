@@ -1,0 +1,22 @@
+vsearch v2.0.3_linux_x86_64, 251.9GB RAM, 64 cores
+/home/joiglu/miniconda2/lib/python2.7/site-packages/bin/vsearch-linux-x86_64 -cluster_smallmem /data/joiglu/fish/results/2016-10-28/merged/merged_consens/merged_catshuf.tmp -strand plus -query_cov 0.9 -minsl 0.5 -id 0.86 -userout /data/joiglu/fish/results/2016-10-28/merged/merged_consens/merged.utemp -notmatched /data/joiglu/fish/results/2016-10-28/merged/merged_consens/merged.htemp -userfields query+target+qstrand -maxaccepts 1 -maxrejects 0 -fasta_width 0 -threads 0 -fulldp -usersort -log /data/joiglu/fish/results/2016-10-28/merged/merged_consens/s6_cluster_stats.txt 
+Started  Wed Feb  8 10:11:04 20172536514608 nt in 5377763 seqs, min 50, max 595, avg 472
+
+
+      Alphabet  nt
+    Word width  8
+     Word ones  8
+        Spaced  No
+        Hashed  No
+         Coded  No
+       Stepped  No
+         Slots  65536 (65.5k)
+       DBAccel  100%
+
+Clusters: 2949621 Size min 1, max 1576, avg 1.8
+Singletons: 2293825, 42.7% of seqs, 77.8% of clusters
+
+
+Finished Sat Mar 25 23:40:15 2017
+Elapsed time 65609:11
+Max memory 43.7GB

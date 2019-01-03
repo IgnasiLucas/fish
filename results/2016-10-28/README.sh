@@ -102,16 +102,24 @@ if [ ! -e params-paired.txt ]; then
    sed -i "/## \[28\]/c populations.txt                ## [28] [pop_assign_file]: Path to population assignment file"              params-paired.txt
 fi
 
-touch checkpoints
+for STEP in 2 3 4 5 6 7; do
+   if ipyrad -p params-merged.txt -r | gawk -v STEP=$STEP '((/^step/) && ($2 == STEP ":")){print}' | tee z1 | grep -q None; then
+      ipyrad -p params-merged.txt -s $STEP -c 24 1> merged/step$STEP.log 2> merged/step$STEP.err
+      # This is to reduce the size of the log:
+      gawk -v FS="\r" '{print $NF}' merged/step$STEP.log > z2
+      mv z2 merged/step$STEP.log
+   else
+      cat z1
+      rm z1
+   fi
 
-if ! grep -q run-merged checkpoints; then
-   echo run-merged >> checkpoints
-   ipyrad -p params-merged.txt -s 123 -c 24 --MPI &
-fi
-
-if ! grep -q run-paired checkpoints; then
-   echo run-paired >> checkpoints
-   ipyrad -p params-paired.txt -s 123 -c 24 --MPI &
-fi
-
-wait
+   if ipyrad -p params-paired.txt -r | gawk -v STEP=$STEP '((/^step/) && ($2 == STEP ":")){print}' | tee z1 | grep -q None; then
+      ipyrad -p params-paired.txt -s $STEP -c 24 1> paired/step$STEP.log 2> paired/step$STEP.err
+      gawk -v FS="\r" '{print $NF}' paired/step$STEP.log > z2
+      mv z2 paired/step$STEP.log
+   else
+      cat z1
+      rm z1
+   fi
+done
+rm z1

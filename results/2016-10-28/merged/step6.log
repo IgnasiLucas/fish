@@ -1,0 +1,19 @@
+
+ -------------------------------------------------------------
+  ipyrad [v.0.4.1]
+  Interactive assembly and analysis of RAD-seq data
+ -------------------------------------------------------------
+  loading Assembly: merged
+  from saved path: /data/joiglu/fish/results/2016-10-28/merged/merged.json
+  local compute node: [24 cores] on pascual-RS920-E7-RS8
+
+  Step 6: Clustering across 23 samples at 0.86 similarity
+  [####################] 100%  concat/shuffle input  | 0:03:40 
+  [####################] 100%  clustering across     | 45 days, 13:29:10 
+  [####################] 100%  building clusters     | 0:01:31 
+  [####################] 100%  aligning clusters     | 1:46:14 
+  [####################] 100%  database indels       | 0:17:58 
+  [####################] 100%  indexing clusters     | 1:01:14 
+  [####################] 100%  building database     | 0:10:45 
+
+

@@ -1,0 +1,13 @@
+
+ -------------------------------------------------------------
+  ipyrad [v.0.4.1]
+  Interactive assembly and analysis of RAD-seq data
+ -------------------------------------------------------------
+  loading Assembly: merged
+  from saved path: /data/joiglu/fish/results/2016-10-28/merged/merged.json
+  local compute node: [24 cores] on pascual-RS920-E7-RS8
+
+  Step 4: Joint estimation of error rate and heterozygosity
+  [####################] 100%  inferring [H, E]      | 0:06:37 
+
+
