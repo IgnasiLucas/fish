@@ -1,0 +1,218 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage[official]{eurosym}
+\title{Genotyping by sequencing protocol}
+\begin{document}
+\maketitle
+\section{DNA extraction}
+\subsection{First session}
+You need a DNeasy Blood \& Tissue Kit (Qiagen), and RNase A. Have some liquid nitrogen ready in a container, clean plastic pestles and an electric screw driver. Buffer ATL may form precipitate upon storage. If necessary, warm to 56$^\circ$C until precipitates fully dissolve.
+\begin{enumerate}
+\item Put one mosquito in a 1.5 ml tube and immediately, on ice. Add a small amount of autoclaved sea sand. Keep the tube open and deep the bottom of it in the liquid nitrogen to freeze the sample, with care not to freeze your fingertips. Use the screw driver with a pestle fitted on it to grind the mosquito. Press hard the pestle against the tube. Alternate between grinding and cooling the tube down in the liquid nitrogen.
+\item When the mosquito is powdered, let the tube recover a temperateu >0$^\circ$C. Add 180 $\mu$l of buffer ATL and remove the pestle with care of leaving the liquid in the tube. Then, add 20 $\mu$l of proteinase K, vortex, and incubate at 56$^\circ$C overnight on a rocking platform. Make sure to seal the tubes with parafilm to reduce evaporation.
+\end{enumerate}
+\subsection{Second session}
+\begin{enumerate}
+\item Just like the ATL buffer, buffer AL may also form precipitates. Warm it up if necessary to dissolve them. Make sure that buffers AW1 and AW2 have the ethanol added.
+\item After the incubation, bring samples to room temperature. Centrifuge for 2 min at 8000 $\times g$ (10000 rpm?), at 20$^\circ$C. Transfer supernatant to a new tube. This removes the sand.
+\item Add 4 $\mu$l RNase A (100 mg/ml), mix by vortexing, and incubate for 2 min at room temperature.
+\item Vortex for 15 s. Add 200 $\mu$l buffer AL to the sample, and mix thoroughly by vortexing. Then add 200 $\mu$l ethanol (96-100\%), and mix again thoroughly by vortexing. It is essential that the sample, buffer AL, and ethanol are mixed immediately and thoroughly by vortexing or pipetting to yield a homogeneous solution. Buffer AL and ethanol can be premixed and added together in one step to save time when processing multiple samples.
+\item Pipet the mixture from the previous step (including any precipitate) into the DNeasy Mini spin column placed in a 2 ml collection tube. Centrifuge at $\geq6000 \times g$ (8000 rpm) for 1 min. Discard flow-through and collection tube. 
+\item Place the DNeasy Mini spin column in a new 2 ml collection tube, add 500 $\mu$lk buffer AW1, and centrifuge for 1 min at $\geq6000 \times g$ (8000 rpm). Discard flow-through and collection tube.
+\item Place the DNeasy Mini spin column in a new 2 ml collection tube, add 500 $\mu$l buffer AW2, and centrifuge for 3 min at 20000$\geq \times g$ (14000 rpm) to dry the DNeasy membrane. Discard flow-through and collection tube. It is important to dry the membrane, since residual ethanol may interfere with subsequent reactions. This centrifugation step ensures that no residual ethanol will be carried over during the following elution. Following the centrifugation step, remove the DNeasy Mini spin column carefully so that the column does not come into contact with the flow-through, since this will result in carryover ethanol. If carryover of ethanol occurs, empty the collection tube, then reuse it in another centrifugation for 1 min at 20000$\times g$ (14000 rpm).
+\item Place the DNeasy Mini spin column in a clean 1.5 ml or 2 ml microcentrifuge tube (not provided in the DNeasy kit), and pipet 200 $\mu$l buffer AE directly onto the DNeasy membrane. Incubate at room temperature for 1 min, and then centrifuge for 1 min at $\geq6000 \times g$ (8000 rpm) to elute. Elution with 100 $\mu$l (instead of 200 $\mu$l) increases the final DNA concentration in the eluate, but also decreases the overall DNA yield. For maximum DNA yield, repeat elution once more. Do not elute more than 200 $\mu$l into a 1.5 ml microcentrifuge tube because the DNeasy Mini spin column will come into contact with the eluate.
+\end{enumerate}
+
+\section{Digestion}
+I digest the DNA with only one enzymee, NlaIII (5'-CATG$\downarrow$-3'; NEB). Table~\ref{tau:digest} shows the composition of a typical digestion reaction. The DNA volume varies among samples. When deciding the final volume, it is important to keep in mind the following advice:
+\begin{enumerate}
+   \item If DNA is in a buffer with some salt (such as TE), then the DNA volume should \textbf{not} be more than 25\% of the reaction volume. Otherwise, the salt in the buffer can inhibit the enzyme.
+   \item If DNA is very diluted and the DNA volume is higher than 100 $\mu$l, it may be a good idea to concentrate the DNA first. However, a highly diluted DNA is apparently the last of the concerns in restriction reactions (mental note: I wonder if it can be compensated to some extent with longer incubation time).
+   \item As a rule of thumb: use 1 $\mu$l of enzyme (10000 units/ml) per 1 $\mu$g of DNA.
+   \item Enzymes are in 50\% glycerol (to avoid freezing). Always keep the total concentration of glycerol in the reaction below 5\%.
+   \item DNA concentration in the reaction should be at 20-100 ng/$\mu$l.
+\end{enumerate}
+
+\begin{table}
+\begin{center}
+\caption{Typical restriction digest.}\label{tau:digest}
+\vspace{0.3cm}
+\begin{tabular}{ll}
+\toprule
+Restriction enzyme&10 units is sufficient, generaly 1$\mu$l is used.\\
+DNA&$x \mu$l ($\sim1$ $\mu$g)\\
+10$\times$ NEBuffer& $0.4x$ $\mu$l.\\
+Total reaction volume&$4x$ $\mu$l.\\
+H$_2$O&$2.6x - 1 \mu$l\\
+Incubation time&1 hour (I don't think it hurts if more).\\
+Incubation temperature&37$^{\circ}$C for most enzymes.\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+Do not stop the reaction by heat-inactivation of the restriction enzyme. Instead, use a Spin Column or magnetic beads (see below) to clean the reaction product and concentrate the DNA. This way, you prevent bias against shorter and AT-rich fragments, which would de-naturalize during heating and then loose the chance to ligate the adapters.
+
+\subsection{Clean up with magnetic beads}
+\begin{enumerate}
+\item Prepare twice as much 70\% ethanol as total DNA volume you have among all the tubes, or a bit more. Prepare at least 400 $\mu$l of 70\% ethanol per sample.
+\item Vortex High Prep PCR beads thoroughly.
+\item Add beads in a 1.5:1 ratio\footnote{1.5 ratio is generous and allows binding of short fragments as well. If removing short fragments, use an 0.8:1 ratio instead.} to the restriction (or PCR) reaction and vortex well (30 s; or pipette mixing).
+\item Incubate at room temperature for 5 min (or more; this is an important step) without shaking.
+\item Place tube on magnetic rack for 2 min or until the solution is clear (the time depends on the volume of the solution).
+\item Remove supernatant carefully without disturbing the beads. Make sure you have NO beads in the pipet.
+\item Add the same amount of freshly prepared ethanol as supernatant you removed (at least 200 $\mu$l), so that the alcohol covers all the beads.
+\item Let stand for a minute.
+\item Remove supernatant.
+\item Add the same amount of 70\% ethanol again.
+\item Let stand for another minute.
+\item Remove the supernatant.
+\item Air dry pellet (10-20 min) or incubate at 37$^{\circ}$C for $\sim$10 min. You may see a crack in the pellet. If you over-dry the beads, you will see many cracks. If you under-dry the beads, the DNA recovery rate will be lower, due to the remaining ethanol. 
+\item Add 1$\times$ TE buffer.
+\item Vortex for 30 s or pipette mix 10 times. The liquid level should be high enough to contact the magnetic beads. If not, extra vortexing is required, and may not be sufficient to fully elute all the DNA.
+\item Incubate 2 min at room temperature.
+\item Place tube on magnetic rack for 2 min, or until the solution is clear.
+\item Transfer supernatant to a fresh tube.
+\end{enumerate}
+
+About the final volume to elute the DNA, I have been successful with very low ammounts (10-20 $\mu$l), if the pellet was not too dry. It's easier with more. After the digestion reaction, I recover the samples with the amount of TE that would give me the same concentration in all samples, in the order of 10 ng/$\mu$l, assuming that all the original amount of DNA is recovered.
+
+\subsection{Estimate distribution of fragment sizes with Agilent BioAnalyzer}
+This is a tricky machine. Before using it, it is convenient to clean the electrodes: just put 450 $\mu$l H$_2$O in a cleaning chip, place it in the machine (with lid closed), and let it sit for a little while. After removing the water chip, leave the lid of the machine open for a couple of minutes to dry de electrodes. The machine does not have to be turned on for this. You can rinse the chip with destilled water and re-use it later.
+
+Before the assay, you should also set up the computer: turn it on, open the software, choose the machine, select the type of assay, and name the samples.
+
+The assay chip has 11 spots available for samples. When loading it, it is recommended not to press the pippette to the second stop, to avoid the introduction of air bubbles. Loading should be accurate and not too slow. Once the chip is ready, it should be used immediately. Every assay costs on the order of \euro{}50.00.
+
+Follow the instructions in the original protocol.
+
+\section{Ligation}
+\subsection{Prepare annealed adapters stock}
+This is a combination of three protocols \cite{Andolfatto2011,Etter2011,Peterson2012}. Oligos are delivered dry, and need to be suspended in any desired volume or concentration. The delivery documentation suggests 100 pmol/$\mu$l (that is, 100 $\mu$M).
+
+\begin{table}
+\caption{Annealing buffer (100 $\mu$l, 10X).}\label{tau:buffer}
+\vspace*{0.3cm}
+\begin{tabular}{lrrr}
+\toprule
+Reagent&Amount to add&Final concentration\\
+\midrule
+Tris-HCl, pH 8, 1 M&10 $\mu$l&100 mM\\
+EDTA, 0.5 M&2 $\mu$l&10 mM\\
+NaCl (58.44 g/mol)&2.92 mg&500 mM\\
+H$_2$O&88 $\mu$l&\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{enumerate}
+\item Prepare the annealing buffer stock (10X): 100 mM Tris HCl (pH 8), 500 mM NaCl, 1 mM EDTA (see table~\ref{tau:buffer}).
+\item Suspend the oligos in the volumes required to have them in 100 $\mu$M (100 pmol/$\mu$l). Use TE buffer.
+\item To produce 10 $\mu$l of annealed stock from each adapter, at 15 $\mu$M (15 pmol/$\mu$l), combine: 1.5 $\mu$l of the top oligo (100 $\mu$M), 1.5 $\mu$l of the bottom oligo (100 $\mu$M), 1 $\mu$l 10$\times$ annealing buffer (table~\ref{tau:buffer}), and 6 $\mu$l of H$_2$O. 
+\item In a thermocycler, incubate at 97.5 $^{\circ}$C for 2.5 minutes, and then cool at a rate not greater than 3 $^{\circ}$C per minute, until the solution reaches a temperature of 21 $^{\circ}$C. Hold at 4 $^{\circ}$C.
+\item The final working strength concentration of annealed adapters is calculated for each sample to have 7 times more adapters than fragment ends in the sample, in a volume of 1 or 2 $\mu$l. The required working concentration must be lower than the concentration of the annealed adapter stock (it can be lowered by increasing the volume added per reaction).
+\end{enumerate}
+
+\begin{table}
+\caption{Volumes of reactants in the ligation reaction. All in $\mu$l. T4 ligase is at 2000000 U/ml.}\label{tau:ligation}
+\vspace*{0.2cm}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Sample&DNA&10$\times$ Buffer&Adapter&1.5 M NaCl&T4&Total\\
+\midrule
+&&&&&&\\
+&&&&&&\\
+&&&&&&\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Adapter ligation}
+Following \cite{Etter2011}, I was planning to use NEB Buffer 2, supplemented with rATP, to run the ligation. I find that I don't have NEB buffer 2, but only T4 DNA ligase buffer. The reason argued to suggest NEB buffer 2 is that it contains 50 mM NaCl, which is about the maximum that T4 DNA ligase can stand without being inhibited. The presence of some salt helps keep the DNA fragments annealed. I just supplement the reaction with 50 mM NaCl. 
+\begin{enumerate}
+\item Prepare a 1.5 M solution of NaCl in a 10 ml Falcon tube, using 10 ml H$_2$O and 0.87 g NaCl (molecular weight 58.44 g/mol).
+\item Add to the DNA samples the corresponding amounts of 10$\times$ T4 ligase reaction buffer, working stock of adapters, 1.5 M NaCl, and T4 DNA ligase (2000000 U/ml), according to table~\ref{tau:ligation}. Be sure to add the adapters to the reaction before the ligase, to prevent religation of the genomic DNA.
+\item Incubate the reaction at 16 $^{\circ}$C overnight (or at least 2 hours).
+\item Heat inactivate T4 DNA ligase for 10 min at 65 $^{\circ}$C. Allow reactions to cool slowly (2 $^{\circ}$C per 90 s, or 0.02$^{\circ}$C/s) to ambient temperature.
+\end{enumerate}
+
+\section{Clean up of ligation reactions}
+Before pooling the samples together, it is important to check that the ligation worked. Unfortunately, this involves another clean-up step, with magnetic beads (see above). If we did not clean the reaction, the excess of adapter dimers would dominate the fragment size distributions and the Bioanalyzer would not get precise measures in the size range of interest. This time, the ratio of beads to sample must be lower, 0.8:1, in order to remove as many adapter dimers as possible. Based on the results of the last Bioanalyzer run, the `elution' volumes must be calculated with the aim of leveling up (and optimizing) the concentrations of fragments \emph{in the desired size range} among samples.
+
+\section{Check size distributions with Agilent Bioanalyzer}
+This second run of the Bioanalyzer helps determine if the ligation worked. If it did, only a small shift of the distribution of fragment sizes would be observed, with respect to the previous assay. If the distribution of fragment sizes changes shapes significantly, it is indicative of re-ligation of genomic fragments. Another reason to run all samples through the Bioanalyzer is to get accurate estimates of the molarity of the fragments in the desired size range, which are needed for pooling.
+
+\section{Choose a size range}
+The adapters ligated have divergent ends. They are composed of a bottom strand of 39-42 bases and a top strand of 42-45 bases. They are annealed along a stretch of 16-19 base pairs. At this point the same adapter is ligated at both ends. Thus each genomic DNA fragment has been extended by 81-87 `base pairs'. Sequencing will start at base 30 of the top strand of the adapters, in both directions, thus sequencing 12-15 bases of the adapter (codeword and restriction site) and into the genomic fragment for as long as 301 bases. The overlap between the two reads coming from opposite ends will be 662 - $X$, where $X$ is the fragment size. In principle, an overlap longer than just needed to merge the reads serves only the purpose of improving the quality of the bases in the middle of the fragment. I consider that aiming at overlaps between 15 and 60 (fragment range 602 - 647) would be ideal. Let's round it to 600-650.
+
+The molarity of the fragments observed in the previous step should not be a concern now. In order to increase the coverage obtained per genomic fragment, we need to aim at relatively short ranges with necessarily low concentrations. The final PCR should take care of this.
+
+\section{Pooling}
+To determine the amount of DNA from each sample to pool, it is desirable to collect equivalent amounts (at desired fragment size) across samples. However, it is even more important to balance the amounts of fragments with adapters of different sizes. There are 3 sets of adapters, with balanced base composition within each set. Thus, even if not three sets are equally represented, the 4 different sizes within each set must be equally represented.
+
+Apparently, 0.002 pmol of fragments of the desired size range per sample should be enough, and maybe even too much.
+
+\section{Size selection}
+This is done with Pippin Prep, at the IZW.
+
+\section{Another Bioanalyzer run}
+It would be convenient to make sure that size selection worked. At this point a Qubit quantification may give more accurate estimates of concentration, which may be lower than 0.5 ng/$\mu$l.
+
+\section{Amplification PCR}
+The protocol for Phusion High-Fidelity PCR Master Mix with HF Buffer recommends amplification primers (table~\ref{tau:primers}) to be at 0.5 $\mu$M in PCR reactions of either 20 or 50 $\mu$l, which means that there should be either 10 or 25 pmols of each primer per reaction. About template DNA, the protocol only says that it should be less than 250 ng. However, the double digest protocol suggests 2.0 $\mu$M primers in 20 $\mu$l of final volume; that is, 40 pmols of primers. And only 20 ng of DNA, which would be about 0.06 and 0.1 pmols of fragments, depending on their average size (500 or 200). I think the latter is closer to what I need. I run 5 PCR reactions like the one shown on table~\ref{tau:PCR}.
+
+\begin{table}
+\begin{center}
+\caption{Amplification primers}\label{tau:primers}
+\vspace*{0.2cm}
+\begin{tabular}{lcc}
+\toprule
+&Primer 1&Primer 2\\
+\midrule
+Length (bp)&61&55\\
+Molecular weight (g/mol)&18973.2&16782.0\\
+Basic T$_M$ First cycle ($^{\circ}$C)&65.7&64.4\\
+52 mM Na$^{+}$ T$_M$ 1$^{st}$ cycle ($^{\circ}$C)&75.3&73.6\\
+Basic T$_M$ Later cycles ($^{\circ}$C)&74.7&74.3\\
+52 mM Na$^{+}$ T$_M$ Later ($^{\circ}$C)&86.7&86.0\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}
+\begin{center}
+\caption{PCR reactions in 50 $\mu$l. 10 $\mu$l of 10 $\mu$M Primer Mix may be prepared with 1 $\mu$l 100 $\mu$M Primer 1 $+$ 1 $\mu$l 100 $\mu$M Primer 2 $+$ 8 $\mu$l nuclease-free water.}\label{tau:PCR}
+\vspace*{0.2cm}
+\begin{tabular}{lrr}
+\toprule
+Component&Volume ($\mu$l)&Final conc. (pmols/l)\\
+\midrule
+10 $\mu$M Primer Mix&1.0&200000.00\\
+Template DNA&15.2&580.24\\
+2$\times$ Phusion Master Mix&25.0&--\\
+Nuclease free water&8.8&--\\
+\midrule
+Total&50.0&\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+I run the product of the first PCR reaction through the Bioanalyzer, and apparently the result is good. The profile shows higher concentration of DNA in the expected size range than the left over concentration of primers. I had to manually add the peak of the upper marker. I do not know if that affects the estimates of concentrations: 15107.76 pg/$\mu$l and 51954.8 pmol/l. Since the volume was 50 $\mu$l, that is 2.6 pmols of DNA yield per reaction, out of 0.03 (87-fold increase).
+
+I run the other four PCR reactions in the same way, pooled the products, and cleaned them up with magnetic beads. I eluted in 50 $\mu$l. Either the last 4 PCR did not work as well, or the clean up was not very efficient. In all, and according to Qubit, I got a 20.4 ng/$\mu$l ($\times$ 50 $\mu$l $=$ 1020 ng, which is 25.7 times the original DNA mass. Assuming an average size of 454 bp (from Bioanalyzer; equivalent to a molecular mass of 275917.5), the 20.4 ng/$\mu$l are 73.94 nmol/l, and 3.697 pmols (again, around 25.5 times the original number of molecules).
+
+\section{Clean up with magnetic beads}
+
+\section{Quantification with Qubit or Bioanalyzer}
+
+\section{Sequencing}
+\bibliographystyle{abbrv}
+\bibliography{gbs}
+\end{document}
