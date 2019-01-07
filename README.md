@@ -178,3 +178,18 @@ reads. Deprecated; see 2015-12-16b.
 Comparison of the two sequencing runs of the same DNA library. The 
 correlation of number of reads per sample is excellent.
 
+2015-07-07
+----------
+Re-calculation of ligation reactions.
+
+2015-06-15
+----------
+In silico digestion of Salmo salar genome, to estimate numbers of fragments and aid enzyme selection.
+
+2015-05-05
+----------
+Calculation of ligation reactions for the ddRAD-seq library of our own samples.
+
+2015-04-28
+----------
+Clustering with pyrad of Coregonus sp. data from Gagnaire et al. 2013.

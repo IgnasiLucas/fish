@@ -1,0 +1,7 @@
+set output 'lengths.png'
+ set term png large
+set xlab 'length (bp)'
+set ylab 'Frequency'
+set xlab 'Length (bp)'
+plot 'wide/lengths_all.hist' using 1:2 with lines title 'all fragments', 'wide/lengths_inner.hist' using 1:2 with lines title 'inner fragments'
+quit

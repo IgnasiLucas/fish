@@ -1,0 +1,846 @@
+Sample St001.1:
+  Amount of DNA: 31.62 µl at 9.5 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.218318 ng/fmol.
+  Fragment ends: 2.75185738235052 pmols.
+     Expected amount of P5-compatible ends: 2.21744667869805 pmols.
+     Expected amount of P7-compatible ends: 0.53441070365247 pmols.
+  Target amount of P5 adapter A01 (P5-compatible ends * 10): 22.1744667869805 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.3441070365247 pmols.
+  Concentration of P5 adapter A01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and A01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter A01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.935218731391823 µl.
+  Ligation reaction St001.1: 31.62 µl DNA, 0.935218731391823 µl adapter mixture working stock, 4.00 µl 10X Ligase Buffer, 1.00 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 40 µl.
+
+Sample St001.2:
+  Amount of DNA: 31.62 µl at 9.5 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.218318 ng/fmol.
+  Fragment ends: 2.75185738235052 pmols.
+     Expected amount of P5-compatible ends: 2.21744667869805 pmols.
+     Expected amount of P7-compatible ends: 0.53441070365247 pmols.
+  Target amount of P5 adapter A01 (P5-compatible ends * 10): 22.1744667869805 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.3441070365247 pmols.
+  Concentration of P5 adapter A01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and A01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter A01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.935218731391823 µl.
+  Ligation reaction St001.2: 31.62 µl DNA, 0.935218731391823 µl adapter mixture working stock, 4.00 µl 10X Ligase Buffer, 1.00 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 40 µl.
+
+Sample St003.1:
+  Amount of DNA: 25.81 µl at 11.6 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.206906 ng/fmol.
+  Fragment ends: 2.89402917266778 pmols.
+     Expected amount of P5-compatible ends: 2.3320087073357 pmols.
+     Expected amount of P7-compatible ends: 0.562020465332083 pmols.
+  Target amount of P5 adapter B01 (P5-compatible ends * 10): 23.320087073357 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.62020465332083 pmols.
+  Concentration of P5 adapter B01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and B01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter B01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.983535814331145 µl.
+  Ligation reaction St003.1: 25.81 µl DNA, 0.983535814331145 µl adapter mixture working stock, 3.30 µl 10X Ligase Buffer, 0.82 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 33 µl.
+
+Sample St003.2:
+  Amount of DNA: 25.81 µl at 11.6 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.206906 ng/fmol.
+  Fragment ends: 2.89402917266778 pmols.
+     Expected amount of P5-compatible ends: 2.3320087073357 pmols.
+     Expected amount of P7-compatible ends: 0.562020465332083 pmols.
+  Target amount of P5 adapter B01 (P5-compatible ends * 10): 23.320087073357 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.62020465332083 pmols.
+  Concentration of P5 adapter B01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and B01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter B01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.983535814331145 µl.
+  Ligation reaction St003.2: 25.81 µl DNA, 0.983535814331145 µl adapter mixture working stock, 3.30 µl 10X Ligase Buffer, 0.82 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 33 µl.
+
+Sample St006.1:
+  Amount of DNA: 27.56 µl at 10.9 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.202655 ng/fmol.
+  Fragment ends: 2.9646838222595 pmols.
+     Expected amount of P5-compatible ends: 2.38894222397671 pmols.
+     Expected amount of P7-compatible ends: 0.575741598282796 pmols.
+  Target amount of P5 adapter G01 (P5-compatible ends * 10): 23.8894222397671 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.75741598282796 pmols.
+  Concentration of P5 adapter G01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and G01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter G01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 1.00754779699489 µl.
+  Ligation reaction St006.1: 27.56 µl DNA, 1.00754779699489 µl adapter mixture working stock, 3.50 µl 10X Ligase Buffer, 0.88 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 35 µl.
+
+Sample St006.2:
+  Amount of DNA: 27.56 µl at 10.9 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.202655 ng/fmol.
+  Fragment ends: 2.9646838222595 pmols.
+     Expected amount of P5-compatible ends: 2.38894222397671 pmols.
+     Expected amount of P7-compatible ends: 0.575741598282796 pmols.
+  Target amount of P5 adapter G01 (P5-compatible ends * 10): 23.8894222397671 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.75741598282796 pmols.
+  Concentration of P5 adapter G01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and G01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter G01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 1.00754779699489 µl.
+  Ligation reaction St006.2: 27.56 µl DNA, 1.00754779699489 µl adapter mixture working stock, 3.50 µl 10X Ligase Buffer, 0.88 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 35 µl.
+
+Sample St015.1:
+  Amount of DNA: 25.91 µl at 11.6 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.207858 ng/fmol.
+  Fragment ends: 2.8919358408144 pmols.
+     Expected amount of P5-compatible ends: 2.33032190052825 pmols.
+     Expected amount of P7-compatible ends: 0.561613940286157 pmols.
+  Target amount of P5 adapter H01 (P5-compatible ends * 10): 23.3032190052825 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.61613940286157 pmols.
+  Concentration of P5 adapter H01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and H01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter H01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.982824395500775 µl.
+  Ligation reaction St015.1: 25.91 µl DNA, 0.982824395500775 µl adapter mixture working stock, 3.40 µl 10X Ligase Buffer, 0.85 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 34 µl.
+
+Sample St015.2:
+  Amount of DNA: 25.91 µl at 11.6 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.207858 ng/fmol.
+  Fragment ends: 2.8919358408144 pmols.
+     Expected amount of P5-compatible ends: 2.33032190052825 pmols.
+     Expected amount of P7-compatible ends: 0.561613940286157 pmols.
+  Target amount of P5 adapter H01 (P5-compatible ends * 10): 23.3032190052825 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.61613940286157 pmols.
+  Concentration of P5 adapter H01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and H01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter H01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.982824395500775 µl.
+  Ligation reaction St015.2: 25.91 µl DNA, 0.982824395500775 µl adapter mixture working stock, 3.40 µl 10X Ligase Buffer, 0.85 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 34 µl.
+
+Sample St016.1:
+  Amount of DNA: 30.04 µl at 10.0 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.212878 ng/fmol.
+  Fragment ends: 2.82227379062186 pmols.
+     Expected amount of P5-compatible ends: 2.27418822048309 pmols.
+     Expected amount of P7-compatible ends: 0.548085570138765 pmols.
+  Target amount of P5 adapter E01 (P5-compatible ends * 10): 22.7418822048309 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.48085570138765 pmols.
+  Concentration of P5 adapter E01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and E01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter E01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.959149747742839 µl.
+  Ligation reaction St016.1: 30.04 µl DNA, 0.959149747742839 µl adapter mixture working stock, 3.80 µl 10X Ligase Buffer, 0.95 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 38 µl.
+
+Sample St016.2:
+  Amount of DNA: 30.04 µl at 10.0 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.212878 ng/fmol.
+  Fragment ends: 2.82227379062186 pmols.
+     Expected amount of P5-compatible ends: 2.27418822048309 pmols.
+     Expected amount of P7-compatible ends: 0.548085570138765 pmols.
+  Target amount of P5 adapter E01 (P5-compatible ends * 10): 22.7418822048309 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.48085570138765 pmols.
+  Concentration of P5 adapter E01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and E01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter E01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.959149747742839 µl.
+  Ligation reaction St016.2: 30.04 µl DNA, 0.959149747742839 µl adapter mixture working stock, 3.80 µl 10X Ligase Buffer, 0.95 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 38 µl.
+
+Sample St019.1:
+  Amount of DNA: 27.42 µl at 10.9 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.205778 ng/fmol.
+  Fragment ends: 2.90485863406195 pmols.
+     Expected amount of P5-compatible ends: 2.34073508732712 pmols.
+     Expected amount of P7-compatible ends: 0.564123546734831 pmols.
+  Target amount of P5 adapter F01 (P5-compatible ends * 10): 23.4073508732712 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.64123546734831 pmols.
+  Concentration of P5 adapter F01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and F01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter F01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.987216206785954 µl.
+  Ligation reaction St019.1: 27.42 µl DNA, 0.987216206785954 µl adapter mixture working stock, 3.50 µl 10X Ligase Buffer, 0.88 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 35 µl.
+
+Sample St019.2:
+  Amount of DNA: 27.42 µl at 10.9 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.205778 ng/fmol.
+  Fragment ends: 2.90485863406195 pmols.
+     Expected amount of P5-compatible ends: 2.34073508732712 pmols.
+     Expected amount of P7-compatible ends: 0.564123546734831 pmols.
+  Target amount of P5 adapter F01 (P5-compatible ends * 10): 23.4073508732712 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.64123546734831 pmols.
+  Concentration of P5 adapter F01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and F01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter F01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.987216206785954 µl.
+  Ligation reaction St019.2: 27.42 µl DNA, 0.987216206785954 µl adapter mixture working stock, 3.50 µl 10X Ligase Buffer, 0.88 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 35 µl.
+
+Sample St037.1:
+  Amount of DNA: 26.40 µl at 11.4 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.210686 ng/fmol.
+  Fragment ends: 2.85695300114863 pmols.
+     Expected amount of P5-compatible ends: 2.30213272832557 pmols.
+     Expected amount of P7-compatible ends: 0.554820272823064 pmols.
+  Target amount of P5 adapter C01 (P5-compatible ends * 10): 23.0213272832557 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.54820272823064 pmols.
+  Concentration of P5 adapter C01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and C01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter C01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.970935477440362 µl.
+  Ligation reaction St037.1: 26.40 µl DNA, 0.970935477440362 µl adapter mixture working stock, 3.40 µl 10X Ligase Buffer, 0.85 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 34 µl.
+
+Sample St037.2:
+  Amount of DNA: 26.40 µl at 11.4 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.210686 ng/fmol.
+  Fragment ends: 2.85695300114863 pmols.
+     Expected amount of P5-compatible ends: 2.30213272832557 pmols.
+     Expected amount of P7-compatible ends: 0.554820272823064 pmols.
+  Target amount of P5 adapter C01 (P5-compatible ends * 10): 23.0213272832557 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.54820272823064 pmols.
+  Concentration of P5 adapter C01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and C01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter C01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.970935477440362 µl.
+  Ligation reaction St037.2: 26.40 µl DNA, 0.970935477440362 µl adapter mixture working stock, 3.40 µl 10X Ligase Buffer, 0.85 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 34 µl.
+
+Sample St039.1:
+  Amount of DNA: 30.50 µl at 9.8 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.213317 ng/fmol.
+  Fragment ends: 2.80240205890764 pmols.
+     Expected amount of P5-compatible ends: 2.25817557906777 pmols.
+     Expected amount of P7-compatible ends: 0.544226479839863 pmols.
+  Target amount of P5 adapter D01 (P5-compatible ends * 10): 22.5817557906777 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.44226479839863 pmols.
+  Concentration of P5 adapter D01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and D01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter D01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.95239633971976 µl.
+  Ligation reaction St039.1: 30.50 µl DNA, 0.95239633971976 µl adapter mixture working stock, 3.90 µl 10X Ligase Buffer, 0.97 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 39 µl.
+
+Sample St039.2:
+  Amount of DNA: 30.50 µl at 9.8 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.213317 ng/fmol.
+  Fragment ends: 2.80240205890764 pmols.
+     Expected amount of P5-compatible ends: 2.25817557906777 pmols.
+     Expected amount of P7-compatible ends: 0.544226479839863 pmols.
+  Target amount of P5 adapter D01 (P5-compatible ends * 10): 22.5817557906777 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.44226479839863 pmols.
+  Concentration of P5 adapter D01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and D01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter D01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.95239633971976 µl.
+  Ligation reaction St039.2: 30.50 µl DNA, 0.95239633971976 µl adapter mixture working stock, 3.90 µl 10X Ligase Buffer, 0.97 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 39 µl.
+
+Sample St043.1:
+  Amount of DNA: 29.55 µl at 10.2 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.216652 ng/fmol.
+  Fragment ends: 2.78243450325868 pmols.
+     Expected amount of P5-compatible ends: 2.24208572272585 pmols.
+     Expected amount of P7-compatible ends: 0.540348780532836 pmols.
+  Target amount of P5 adapter A01 (P5-compatible ends * 10): 22.4208572272585 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.40348780532836 pmols.
+  Concentration of P5 adapter A01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and A01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter A01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.945610365932463 µl.
+  Ligation reaction St043.1: 29.55 µl DNA, 0.945610365932463 µl adapter mixture working stock, 3.80 µl 10X Ligase Buffer, 0.95 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 38 µl.
+
+Sample St043.2:
+  Amount of DNA: 29.55 µl at 10.2 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.216652 ng/fmol.
+  Fragment ends: 2.78243450325868 pmols.
+     Expected amount of P5-compatible ends: 2.24208572272585 pmols.
+     Expected amount of P7-compatible ends: 0.540348780532836 pmols.
+  Target amount of P5 adapter A01 (P5-compatible ends * 10): 22.4208572272585 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.40348780532836 pmols.
+  Concentration of P5 adapter A01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and A01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter A01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.945610365932463 µl.
+  Ligation reaction St043.2: 29.55 µl DNA, 0.945610365932463 µl adapter mixture working stock, 3.80 µl 10X Ligase Buffer, 0.95 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 38 µl.
+
+Sample St044.1:
+  Amount of DNA: 30.00 µl at 10.4 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.210487 ng/fmol.
+  Fragment ends: 2.96455363039048 pmols.
+     Expected amount of P5-compatible ends: 2.38883731536865 pmols.
+     Expected amount of P7-compatible ends: 0.57571631502183 pmols.
+  Target amount of P5 adapter B01 (P5-compatible ends * 10): 23.8883731536865 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.7571631502183 pmols.
+  Concentration of P5 adapter B01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and B01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter B01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 1.0075035512882 µl.
+  Ligation reaction St044.1: 30.00 µl DNA, 1.0075035512882 µl adapter mixture working stock, 3.80 µl 10X Ligase Buffer, 0.95 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 38 µl.
+
+Sample St044.2:
+  Amount of DNA: 30.00 µl at 10.4 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.210487 ng/fmol.
+  Fragment ends: 2.96455363039048 pmols.
+     Expected amount of P5-compatible ends: 2.38883731536865 pmols.
+     Expected amount of P7-compatible ends: 0.57571631502183 pmols.
+  Target amount of P5 adapter B01 (P5-compatible ends * 10): 23.8883731536865 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.7571631502183 pmols.
+  Concentration of P5 adapter B01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and B01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter B01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 1.0075035512882 µl.
+  Ligation reaction St044.2: 30.00 µl DNA, 1.0075035512882 µl adapter mixture working stock, 3.80 µl 10X Ligase Buffer, 0.95 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 38 µl.
+
+Sample St049.1:
+  Amount of DNA: 36.62 µl at 8.2 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.218938 ng/fmol.
+  Fragment ends: 2.74309621902091 pmols.
+     Expected amount of P5-compatible ends: 2.21038693328705 pmols.
+     Expected amount of P7-compatible ends: 0.532709285733861 pmols.
+  Target amount of P5 adapter G01 (P5-compatible ends * 10): 22.1038693328705 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.32709285733861 pmols.
+  Concentration of P5 adapter G01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and G01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter G01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.932241250034256 µl.
+  Ligation reaction St049.1: 36.62 µl DNA, 0.932241250034256 µl adapter mixture working stock, 4.60 µl 10X Ligase Buffer, 1.15 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 46 µl.
+
+Sample St049.2:
+  Amount of DNA: 36.62 µl at 8.2 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.218938 ng/fmol.
+  Fragment ends: 2.74309621902091 pmols.
+     Expected amount of P5-compatible ends: 2.21038693328705 pmols.
+     Expected amount of P7-compatible ends: 0.532709285733861 pmols.
+  Target amount of P5 adapter G01 (P5-compatible ends * 10): 22.1038693328705 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.32709285733861 pmols.
+  Concentration of P5 adapter G01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and G01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter G01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.932241250034256 µl.
+  Ligation reaction St049.2: 36.62 µl DNA, 0.932241250034256 µl adapter mixture working stock, 4.60 µl 10X Ligase Buffer, 1.15 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 46 µl.
+
+Sample St050.1:
+  Amount of DNA: 29.37 µl at 10.2 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.214750 ng/fmol.
+  Fragment ends: 2.78997904540163 pmols.
+     Expected amount of P5-compatible ends: 2.24816511478463 pmols.
+     Expected amount of P7-compatible ends: 0.541813930616997 pmols.
+  Target amount of P5 adapter H01 (P5-compatible ends * 10): 22.4816511478463 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.41813930616997 pmols.
+  Concentration of P5 adapter H01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and H01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter H01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.948174378579744 µl.
+  Ligation reaction St050.1: 29.37 µl DNA, 0.948174378579744 µl adapter mixture working stock, 3.70 µl 10X Ligase Buffer, 0.93 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 37 µl.
+
+Sample St050.2:
+  Amount of DNA: 29.37 µl at 10.2 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.214750 ng/fmol.
+  Fragment ends: 2.78997904540163 pmols.
+     Expected amount of P5-compatible ends: 2.24816511478463 pmols.
+     Expected amount of P7-compatible ends: 0.541813930616997 pmols.
+  Target amount of P5 adapter H01 (P5-compatible ends * 10): 22.4816511478463 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.41813930616997 pmols.
+  Concentration of P5 adapter H01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and H01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter H01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.948174378579744 µl.
+  Ligation reaction St050.2: 29.37 µl DNA, 0.948174378579744 µl adapter mixture working stock, 3.70 µl 10X Ligase Buffer, 0.93 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 37 µl.
+
+Sample Bl065.1:
+  Amount of DNA: 34.56 µl at 8.7 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.219916 ng/fmol.
+  Fragment ends: 2.73442587169647 pmols.
+     Expected amount of P5-compatible ends: 2.20340036741301 pmols.
+     Expected amount of P7-compatible ends: 0.531025504283454 pmols.
+  Target amount of P5 adapter E01 (P5-compatible ends * 10): 22.0340036741301 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.31025504283454 pmols.
+  Concentration of P5 adapter E01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and E01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter E01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.929294632496044 µl.
+  Ligation reaction Bl065.1: 34.56 µl DNA, 0.929294632496044 µl adapter mixture working stock, 4.30 µl 10X Ligase Buffer, 1.07 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 43 µl.
+
+Sample Bl065.2:
+  Amount of DNA: 34.56 µl at 8.7 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.219916 ng/fmol.
+  Fragment ends: 2.73442587169647 pmols.
+     Expected amount of P5-compatible ends: 2.20340036741301 pmols.
+     Expected amount of P7-compatible ends: 0.531025504283454 pmols.
+  Target amount of P5 adapter E01 (P5-compatible ends * 10): 22.0340036741301 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.31025504283454 pmols.
+  Concentration of P5 adapter E01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and E01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter E01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.929294632496044 µl.
+  Ligation reaction Bl065.2: 34.56 µl DNA, 0.929294632496044 µl adapter mixture working stock, 4.30 µl 10X Ligase Buffer, 1.07 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 43 µl.
+
+Sample Bl076.1:
+  Amount of DNA: 34.42 µl at 8.7 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.211229 ng/fmol.
+  Fragment ends: 2.8353493128311 pmols.
+     Expected amount of P5-compatible ends: 2.2847244762793 pmols.
+     Expected amount of P7-compatible ends: 0.550624836551799 pmols.
+  Target amount of P5 adapter F01 (P5-compatible ends * 10): 22.847244762793 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.50624836551799 pmols.
+  Concentration of P5 adapter F01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and F01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter F01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.963593463965648 µl.
+  Ligation reaction Bl076.1: 34.42 µl DNA, 0.963593463965648 µl adapter mixture working stock, 4.30 µl 10X Ligase Buffer, 1.07 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 43 µl.
+
+Sample Bl076.2:
+  Amount of DNA: 34.42 µl at 8.7 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.211229 ng/fmol.
+  Fragment ends: 2.8353493128311 pmols.
+     Expected amount of P5-compatible ends: 2.2847244762793 pmols.
+     Expected amount of P7-compatible ends: 0.550624836551799 pmols.
+  Target amount of P5 adapter F01 (P5-compatible ends * 10): 22.847244762793 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.50624836551799 pmols.
+  Concentration of P5 adapter F01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and F01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter F01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.963593463965648 µl.
+  Ligation reaction Bl076.2: 34.42 µl DNA, 0.963593463965648 µl adapter mixture working stock, 4.30 µl 10X Ligase Buffer, 1.07 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 43 µl.
+
+Sample Bl080.1:
+  Amount of DNA: 32.20 µl at 9.3 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.233630 ng/fmol.
+  Fragment ends: 2.56354064118478 pmols.
+     Expected amount of P5-compatible ends: 2.0657010486667 pmols.
+     Expected amount of P7-compatible ends: 0.497839592518084 pmols.
+  Target amount of P5 adapter C01 (P5-compatible ends * 10): 20.657010486667 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 4.97839592518084 pmols.
+  Concentration of P5 adapter C01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and C01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter C01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.871219286906648 µl.
+  Ligation reaction Bl080.1: 32.20 µl DNA, 0.871219286906648 µl adapter mixture working stock, 4.10 µl 10X Ligase Buffer, 1.02 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 41 µl.
+
+Sample Bl080.2:
+  Amount of DNA: 32.20 µl at 9.3 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.233630 ng/fmol.
+  Fragment ends: 2.56354064118478 pmols.
+     Expected amount of P5-compatible ends: 2.0657010486667 pmols.
+     Expected amount of P7-compatible ends: 0.497839592518084 pmols.
+  Target amount of P5 adapter C01 (P5-compatible ends * 10): 20.657010486667 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 4.97839592518084 pmols.
+  Concentration of P5 adapter C01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and C01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter C01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.871219286906648 µl.
+  Ligation reaction Bl080.2: 32.20 µl DNA, 0.871219286906648 µl adapter mixture working stock, 4.10 µl 10X Ligase Buffer, 1.02 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 41 µl.
+
+Sample Bl083.1:
+  Amount of DNA: 35.64 µl at 7.6 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.202335 ng/fmol.
+  Fragment ends: 2.67738157016829 pmols.
+     Expected amount of P5-compatible ends: 2.1574340692416 pmols.
+     Expected amount of P7-compatible ends: 0.519947500926681 pmols.
+  Target amount of P5 adapter D01 (P5-compatible ends * 10): 21.574340692416 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.19947500926681 pmols.
+  Concentration of P5 adapter D01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and D01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter D01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.909908126621692 µl.
+  Ligation reaction Bl083.1: 35.64 µl DNA, 0.909908126621692 µl adapter mixture working stock, 4.50 µl 10X Ligase Buffer, 1.12 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 45 µl.
+
+Sample Bl104.1:
+  Amount of DNA: 29.23 µl at 10.3 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.210486 ng/fmol.
+  Fragment ends: 2.86070332468668 pmols.
+     Expected amount of P5-compatible ends: 2.30515473903252 pmols.
+     Expected amount of P7-compatible ends: 0.555548585654153 pmols.
+  Target amount of P5 adapter A01 (P5-compatible ends * 10): 23.0515473903252 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.55548585654153 pmols.
+  Concentration of P5 adapter A01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and A01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter A01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.972210024894767 µl.
+  Ligation reaction Bl104.1: 29.23 µl DNA, 0.972210024894767 µl adapter mixture working stock, 3.70 µl 10X Ligase Buffer, 0.93 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 37 µl.
+
+Sample Bl104.2:
+  Amount of DNA: 29.23 µl at 10.3 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.210486 ng/fmol.
+  Fragment ends: 2.86070332468668 pmols.
+     Expected amount of P5-compatible ends: 2.30515473903252 pmols.
+     Expected amount of P7-compatible ends: 0.555548585654153 pmols.
+  Target amount of P5 adapter A01 (P5-compatible ends * 10): 23.0515473903252 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.55548585654153 pmols.
+  Concentration of P5 adapter A01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and A01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter A01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.972210024894767 µl.
+  Ligation reaction Bl104.2: 29.23 µl DNA, 0.972210024894767 µl adapter mixture working stock, 3.70 µl 10X Ligase Buffer, 0.93 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 37 µl.
+
+Sample Bl108.1:
+  Amount of DNA: 29.49 µl at 10.2 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.207836 ng/fmol.
+  Fragment ends: 2.89457071922092 pmols.
+     Expected amount of P5-compatible ends: 2.33244508554822 pmols.
+     Expected amount of P7-compatible ends: 0.562125633672704 pmols.
+  Target amount of P5 adapter B01 (P5-compatible ends * 10): 23.3244508554822 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.62125633672704 pmols.
+  Concentration of P5 adapter B01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and B01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter B01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.983719858927231 µl.
+  Ligation reaction Bl108.1: 29.49 µl DNA, 0.983719858927231 µl adapter mixture working stock, 3.80 µl 10X Ligase Buffer, 0.95 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 38 µl.
+
+Sample Bl108.2:
+  Amount of DNA: 29.49 µl at 10.2 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.207836 ng/fmol.
+  Fragment ends: 2.89457071922092 pmols.
+     Expected amount of P5-compatible ends: 2.33244508554822 pmols.
+     Expected amount of P7-compatible ends: 0.562125633672704 pmols.
+  Target amount of P5 adapter B01 (P5-compatible ends * 10): 23.3244508554822 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.62125633672704 pmols.
+  Concentration of P5 adapter B01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and B01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter B01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.983719858927231 µl.
+  Ligation reaction Bl108.2: 29.49 µl DNA, 0.983719858927231 µl adapter mixture working stock, 3.80 µl 10X Ligase Buffer, 0.95 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 38 µl.
+
+Sample Bl091.1:
+  Amount of DNA: 35.92 µl at 8.4 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.217333 ng/fmol.
+  Fragment ends: 2.77664229546364 pmols.
+     Expected amount of P5-compatible ends: 2.2374183616846 pmols.
+     Expected amount of P7-compatible ends: 0.53922393377904 pmols.
+  Target amount of P5 adapter G01 (P5-compatible ends * 10): 22.374183616846 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.3922393377904 pmols.
+  Concentration of P5 adapter G01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and G01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter G01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.943641884113319 µl.
+  Ligation reaction Bl091.1: 35.92 µl DNA, 0.943641884113319 µl adapter mixture working stock, 4.50 µl 10X Ligase Buffer, 1.12 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 45 µl.
+
+Sample Bl091.2:
+  Amount of DNA: 35.92 µl at 8.4 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.217333 ng/fmol.
+  Fragment ends: 2.77664229546364 pmols.
+     Expected amount of P5-compatible ends: 2.2374183616846 pmols.
+     Expected amount of P7-compatible ends: 0.53922393377904 pmols.
+  Target amount of P5 adapter G01 (P5-compatible ends * 10): 22.374183616846 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.3922393377904 pmols.
+  Concentration of P5 adapter G01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and G01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter G01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.943641884113319 µl.
+  Ligation reaction Bl091.2: 35.92 µl DNA, 0.943641884113319 µl adapter mixture working stock, 4.50 µl 10X Ligase Buffer, 1.12 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 45 µl.
+
+Sample Bl093.1:
+  Amount of DNA: 37.50 µl at 9.1 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.210487 ng/fmol.
+  Fragment ends: 3.24248053323958 pmols.
+     Expected amount of P5-compatible ends: 2.61279081368446 pmols.
+     Expected amount of P7-compatible ends: 0.629689719555127 pmols.
+  Target amount of P5 adapter H01 (P5-compatible ends * 10): 26.1279081368446 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 6.29689719555127 pmols.
+  Concentration of P5 adapter H01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and H01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter H01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 1.10195700922147 µl.
+  Ligation reaction Bl093.1: 37.50 µl DNA, 1.10195700922147 µl adapter mixture working stock, 4.70 µl 10X Ligase Buffer, 1.18 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 47 µl.
+
+Sample Bl093.2:
+  Amount of DNA: 37.50 µl at 9.1 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.210487 ng/fmol.
+  Fragment ends: 3.24248053323958 pmols.
+     Expected amount of P5-compatible ends: 2.61279081368446 pmols.
+     Expected amount of P7-compatible ends: 0.629689719555127 pmols.
+  Target amount of P5 adapter H01 (P5-compatible ends * 10): 26.1279081368446 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 6.29689719555127 pmols.
+  Concentration of P5 adapter H01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and H01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter H01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 1.10195700922147 µl.
+  Ligation reaction Bl093.2: 37.50 µl DNA, 1.10195700922147 µl adapter mixture working stock, 4.70 µl 10X Ligase Buffer, 1.18 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 47 µl.
+
+Sample Bl094.1:
+  Amount of DNA: 31.89 µl at 9.4 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.210238 ng/fmol.
+  Fragment ends: 2.85168237901807 pmols.
+     Expected amount of P5-compatible ends: 2.29788566101276 pmols.
+     Expected amount of P7-compatible ends: 0.553796718005308 pmols.
+  Target amount of P5 adapter E01 (P5-compatible ends * 10): 22.9788566101276 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.53796718005308 pmols.
+  Concentration of P5 adapter E01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and E01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter E01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.96914425650929 µl.
+  Ligation reaction Bl094.1: 31.89 µl DNA, 0.96914425650929 µl adapter mixture working stock, 4.00 µl 10X Ligase Buffer, 1.00 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 40 µl.
+
+Sample Bl094.2:
+  Amount of DNA: 31.89 µl at 9.4 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.210238 ng/fmol.
+  Fragment ends: 2.85168237901807 pmols.
+     Expected amount of P5-compatible ends: 2.29788566101276 pmols.
+     Expected amount of P7-compatible ends: 0.553796718005308 pmols.
+  Target amount of P5 adapter E01 (P5-compatible ends * 10): 22.9788566101276 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.53796718005308 pmols.
+  Concentration of P5 adapter E01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and E01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter E01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.96914425650929 µl.
+  Ligation reaction Bl094.2: 31.89 µl DNA, 0.96914425650929 µl adapter mixture working stock, 4.00 µl 10X Ligase Buffer, 1.00 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 40 µl.
+
+Sample Bl095.1:
+  Amount of DNA: 34.66 µl at 8.7 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.204225 ng/fmol.
+  Fragment ends: 2.95303709144326 pmols.
+     Expected amount of P5-compatible ends: 2.37955728828498 pmols.
+     Expected amount of P7-compatible ends: 0.573479803158281 pmols.
+  Target amount of P5 adapter F01 (P5-compatible ends * 10): 23.7955728828498 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.73479803158281 pmols.
+  Concentration of P5 adapter F01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and F01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter F01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 1.00358965552699 µl.
+  Ligation reaction Bl095.1: 34.66 µl DNA, 1.00358965552699 µl adapter mixture working stock, 4.40 µl 10X Ligase Buffer, 1.10 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 44 µl.
+
+Sample Bl095.2:
+  Amount of DNA: 34.66 µl at 8.7 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.204225 ng/fmol.
+  Fragment ends: 2.95303709144326 pmols.
+     Expected amount of P5-compatible ends: 2.37955728828498 pmols.
+     Expected amount of P7-compatible ends: 0.573479803158281 pmols.
+  Target amount of P5 adapter F01 (P5-compatible ends * 10): 23.7955728828498 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.73479803158281 pmols.
+  Concentration of P5 adapter F01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and F01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter F01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 1.00358965552699 µl.
+  Ligation reaction Bl095.2: 34.66 µl DNA, 1.00358965552699 µl adapter mixture working stock, 4.40 µl 10X Ligase Buffer, 1.10 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 44 µl.
+
+Sample Bl098.1:
+  Amount of DNA: 34.81 µl at 8.5 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.211104 ng/fmol.
+  Fragment ends: 2.80321547673185 pmols.
+     Expected amount of P5-compatible ends: 2.25883103115052 pmols.
+     Expected amount of P7-compatible ends: 0.544384445581325 pmols.
+  Target amount of P5 adapter C01 (P5-compatible ends * 10): 22.5883103115052 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.44384445581325 pmols.
+  Concentration of P5 adapter C01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and C01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter C01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.952672779767318 µl.
+  Ligation reaction Bl098.1: 34.81 µl DNA, 0.952672779767318 µl adapter mixture working stock, 4.40 µl 10X Ligase Buffer, 1.10 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 44 µl.
+
+Sample Bl098.2:
+  Amount of DNA: 34.81 µl at 8.5 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.211104 ng/fmol.
+  Fragment ends: 2.80321547673185 pmols.
+     Expected amount of P5-compatible ends: 2.25883103115052 pmols.
+     Expected amount of P7-compatible ends: 0.544384445581325 pmols.
+  Target amount of P5 adapter C01 (P5-compatible ends * 10): 22.5883103115052 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 5.44384445581325 pmols.
+  Concentration of P5 adapter C01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and C01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter C01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 0.952672779767318 µl.
+  Ligation reaction Bl098.2: 34.81 µl DNA, 0.952672779767318 µl adapter mixture working stock, 4.40 µl 10X Ligase Buffer, 1.10 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 44 µl.
+
+Sample Bl116.1:
+  Amount of DNA: 24.55 µl at 12.2 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.190475 ng/fmol.
+  Fragment ends: 3.1448746554666 pmols.
+     Expected amount of P5-compatible ends: 2.53413999737498 pmols.
+     Expected amount of P7-compatible ends: 0.610734658091613 pmols.
+  Target amount of P5 adapter D01 (P5-compatible ends * 10): 25.3413999737498 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 6.10734658091613 pmols.
+  Concentration of P5 adapter D01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and D01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter D01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 1.06878565166032 µl.
+  Ligation reaction Bl116.1: 24.55 µl DNA, 1.06878565166032 µl adapter mixture working stock, 3.20 µl 10X Ligase Buffer, 0.80 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 32 µl.
+
+Sample Bl116.2:
+  Amount of DNA: 24.55 µl at 12.2 ng/µl.
+  Average fragment mass (from BioAnalyzer): 0.190475 ng/fmol.
+  Fragment ends: 3.1448746554666 pmols.
+     Expected amount of P5-compatible ends: 2.53413999737498 pmols.
+     Expected amount of P7-compatible ends: 0.610734658091613 pmols.
+  Target amount of P5 adapter D01 (P5-compatible ends * 10): 25.3413999737498 pmols.
+  Target amount of common adapter P7 (P7-compatible ends * 10): 6.10734658091613 pmols.
+  Concentration of P5 adapter D01 required: 23.7104604972782 pmol/µl.
+  Concentration of common P7 adapter required: 5.71428571428571 pmol/µl.
+  Concentration of common and D01 adapter stocks: 40 pmol/µl.
+  Volume of working adapter mixture stock to make: 14 µl.
+  Volume of original P5 adapter D01 stock required: 8.29866117404737 µl.
+  Volume of original P7 common adapter stock required: 2 µl.
+  Volume of 1X annealing buffer: 3.70133882595263 µl.
+  Volume of this working stock per reaction: 1.06878565166032 µl.
+  Ligation reaction Bl116.2: 24.55 µl DNA, 1.06878565166032 µl adapter mixture working stock, 3.20 µl 10X Ligase Buffer, 0.80 µl 1.5M NaCl, 2 µl T4 Ligase, and water to 32 µl.
+

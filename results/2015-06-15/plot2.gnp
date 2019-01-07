@@ -1,0 +1,7 @@
+set output 'fragments.png'
+set term png large
+set xlab 'Minimum size (bp)'
+set ylab 'Number of fragments'
+set main '50-bp ranges'
+plot 'wide/fragNumRange50_all.txt' using 1:3 with lines title 'all fragments', 'wide/fragNumRange50_inner.txt' using 1:3 with lines title 'inner fragments'
+quit
