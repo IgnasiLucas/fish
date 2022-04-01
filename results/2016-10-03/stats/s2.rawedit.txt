@@ -1,8 +1,0 @@
-sample 	Nreads	passed	passed.w.trim	passed.total
-pooled	12221553	4909041	0	4909041
-
-    Nreads = total number of reads for a sample
-    passed = retained reads that passed quality filtering at full length
-    passed.w.trim= retained reads that were trimmed due to detection of adapters
-    passed.total  = total kept reads of sufficient length
-    note: you can set the option in params file to include trimmed reads of xx length. 
